@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+// import modules
+import React, { useState, useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+// import styles
 import './App.css';
 
+// import components
+import Main from './components/Pages/Main';
+import ThankYou from './components/Pages/ThankYou';
+import Resources from './components/Pages/Resources';
+import Page from './components/pageComponents/Page';
+import Footer from './components/pageComponents/Footer'
+
+// styles for App.js
+const useStyles = makeStyles((theme) => ({}));
+
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Page>
+            <Main />
+          </Page>
+        </Route>
+        <Route exact path="/thankyou">
+          <Page>
+            <ThankYou />
+          </Page>
+        </Route>
+        <Route exact path="/Resources">
+          <Page>
+            <Resources />
+          </Page>
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
