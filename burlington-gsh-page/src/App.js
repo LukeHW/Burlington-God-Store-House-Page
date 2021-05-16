@@ -11,7 +11,8 @@ import Main from './components/Pages/Main';
 import ThankYou from './components/Pages/ThankYou';
 import Resources from './components/Pages/Resources';
 import Page from './components/pageComponents/Page';
-import Footer from './components/pageComponents/Footer'
+import Footer from './components/pageComponents/Footer';
+import Navbar from './components/pageComponents/Navbar';
 
 // styles for App.js
 const useStyles = makeStyles((theme) => ({}));
@@ -23,6 +24,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
+          <Navbar />
           <Page>
             <Main />
           </Page>

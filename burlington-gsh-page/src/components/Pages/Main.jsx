@@ -7,23 +7,27 @@ import Hidden from '@material-ui/core/Hidden';
 import Paper from '@material-ui/core/Paper';
 
 // import components
-import bg from '../../testBG.jpeg';
+import bg from '../../testBG2.jpg';
 
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between",
     fontFamily: 'Open Sans',
+    height: 1200
   },
   paperContainer: {
     backgroundImage: `url(${bg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+    backgroundAttachment: "fixed",
+  },
+  paperContainerOverlay: {
+    backgroundColor: "rgba(0, 0, 0, 0.5)"
   },
   title: {
-    fontWeight: 500,
-    fontSize: 'min(8vw, 90px)',
+    fontWeight: 400,
+    fontSize: 'min(8vw, 32px)',
     color: "white",
     fontFamily: 'Open Sans',
     textAlign: 'center',
@@ -31,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   greeting: {
     fontWeight: 300,
-    fontSize: 'min(5vw, 40px)',
+    fontSize: 'min(5vw, 25px)',
     color: "white",
     fontFamily: 'Open Sans',
     textAlign: "center",
@@ -71,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
   },
   secondContainer: {
     minHeight: "100vh",
-    backgroundColor: ('#222222'),
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
     fontFamily: 'Open Sans',
     padding: theme.spacing(0)
   },
@@ -111,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
       transform: 'scale(1.1)'
     },
     '&:focus': {
-      boxShadow: '0 0px 8px 0 rgba(255, 255, 255, 0.7)',
+      boxShadow: '0 0px 20px 0 rgba(255, 255, 255, 0.7)',
       transform: 'scale(1.1)'
     },
     marginBottom: 150
@@ -121,29 +125,33 @@ const useStyles = makeStyles((theme) => ({
   },
   spacerText: {
     fontWeight: 500,
-    fontSize: 'min(10vw, 70px)',
-    textAlign: 'left',
+    fontSize: 'min(10vw, 32px)',
+    textAlign: 'center',
     color: 'white',
     marginTop: 50,
     padding: 15
   },
   spacerTextBody: {
     fontWeight: 300,
-    fontSize: 'min(4vw, 25px)',
-    textAlign: 'left',
+    fontSize: 'min(4vw, 20px)',
+    textAlign: 'center',
     color: 'white',
-    padding: 15 
+    padding: 25 
   },
   links: {
     paddingTop: 5,
     width: 'inherit',
     transition: 'transform .2s',
+    lineHeight: '1.5',
     '&:hover': {
-      backgroundColor: ('#dddddd')
+      backgroundColor: ('#d8d8d8')
     },
     '&:focus': {
       filter: 'opacity(0.8)'
-    }
+    },
+    '&:visited': {
+      color: '#555555'
+    },
   },
   paperTitle: {
     marginTop: 15
@@ -160,12 +168,40 @@ const useStyles = makeStyles((theme) => ({
   },
   facebookTitle: {
     fontWeight: 500,
-    fontSize: 'min(8vw, 60px)',
-    color: "white",
+    fontSize: 'min(8vw, 32px)',
+    color: "black",
     fontFamily: 'Open Sans',
     textAlign: 'center',
     padding: 5,
-    marginTop: 50
+    marginTop: '250px'
+  },
+  infoContainer: {
+    backgroundColor: '#f8f8f8',
+    width: '100%',
+    height: '100%'
+  },
+  infoSpace: {
+    fontSize: 'min(8vw, 32px)',
+    color: 'black',
+    fontWeight: 400,
+    fontFamily: 'Open Sans',
+    padding: 15,
+    marginTop: 20
+  },
+  infoTitle: {
+    fontWeight: 400,
+    fontSize: 'min(8vw, 32px)',
+    color: "black",
+    fontFamily: 'Open Sans',
+    textAlign: 'center',
+    padding: 5
+  },
+  infoBody: {
+    fontWeight: 300,
+    fontSize: 'min(4vw, 20px)',
+    textAlign: 'center',
+    color: 'black',
+    padding: 25 
   }
 }));
 
@@ -176,12 +212,13 @@ function Main() {
   return (
     <div className="App">
       <Grid className={classes.paperContainer}>
+      <div className={classes.paperContainerOverlay}>
         <div className="AppBG">
           <Grid container className={classes.container}>
             <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
-            <Grid item className={classes.item} xs={12} sm={12} md={5} lg={5} xl={5}>
+            <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
               <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
-                God&#39;s Store House
+                God&#39;s Store House - About Us
               </Typography>
               <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
                 Burlington, KS
@@ -190,24 +227,9 @@ function Main() {
             <Hidden mdUp>
               <Grid item xs="auto" sm="auto" />
             </Hidden>
-            <Grid item className={classes.placerContainer} xs={12} sm={12} md={5} lg={5} xl={5} align="center">
-              <form action="https://www.paypal.com/donate" method="post" target="_top">
-                <input type="hidden" name="hosted_button_id" value="WDDPCHKP4W4BG" />
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-              </form>
-            </Grid>
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-          </Grid>
-        </div>
-      </Grid>
-
-      <Grid container className={classes.secondContainer}>
-        <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2} />
+            <Grid item className={classes.placerContainer} xs={12} sm={12} md={12} lg={12} xl={12} align="center">
+            <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2} />
           <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={8} xl={8}>
-              <Typography className={classes.spacerText} variant="h4" component="h2" gutterBottom>
-                About Us
-              </Typography>
               <Typography className={classes.spacerTextBody} variant="h4" component="h6" gutterBottom>
                 At God&#39;s Storehouse in Burlington, Kansas, we serve residents from the five towns in Coffey County who are in need. God&#39;s Storehouse operates under the Coffey County Ministerial Association who is tax exempt. In April of 2020 GSH will celebrate their 15th year of service in Coffey County. Our current address is 515 Neosho Street in Burlington, Kansas. In 2018 our current building was donated to us. We are in the process of making the necessary repairs needed. Our hours are Monday thru Friday, 9am – 12pm, and every Tuesday evening 5pm - 7pm. God has blessed us with 35 to 40 volunteers who operate our store.
               </Typography>
@@ -219,8 +241,47 @@ function Main() {
               </Typography>
           </Grid>
           <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2} />
+            </Grid>
+            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+          </Grid>
+        </div>
+        </div>
+      </Grid>
 
-          <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2} />
+      <Grid container className={classes.infoContainer}>
+        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+          <Grid item className={classes.infoSpace} xs={12} sm={12} md={12} lg={3} xl={3}>
+              <img className={classes.icons} src="/clothesIcon.png" alt="Clothes" />
+              <Typography className={classes.infoTitle} variant="h1" component="h2" gutterBottom align='center'>
+                Clothes
+              </Typography>
+              <Typography className={classes.infoBody} variant="h1" component="h2" gutterBottom align='center'>
+                God's Storehouse has food available for any Coffey County Resident who is in need.  We offer breakfast items, lunch & dinner, canned fruit, misc. items and canned vegetables.  We also have hygeine items available such as toothpaste, toothbrushes, bar soap, dish soap, deodarant, shampoo, toilet paper and laundry detergent; these items are not constant, only when available.
+              </Typography>
+          </Grid>
+          <Grid item className={classes.infoSpace} xs={12} sm={12} md={12} lg={4} xl={4}>
+              <img className={classes.icons} src="/foodIcon.png" alt="Food and Produce" />
+              <Typography className={classes.infoTitle} variant="h1" component="h2" gutterBottom align='center'>
+                Food
+              </Typography>
+              <Typography className={classes.infoBody} variant="h1" component="h2" gutterBottom align='center'>
+                God's Storehouse has food available for any Coffey County Resident who is in need.  We offer breakfast items, lunch & dinner, canned fruit, misc. items and canned vegetables.  We also have hygeine items available such as toothpaste, toothbrushes, bar soap, dish soap, deodarant, shampoo, toilet paper and laundry detergent; these items are not constant, only when available.
+              </Typography>
+          </Grid>
+          <Grid item className={classes.infoSpace} xs={12} sm={12} md={12} lg={3} xl={3}>
+              <img className={classes.icons} src="/infoIcon.png" alt="Information" />
+              <Typography className={classes.infoTitle} variant="h1" component="h2" gutterBottom align='center'>
+                Information
+              </Typography>
+              <Typography className={classes.infoBody} variant="h1" component="h2" gutterBottom align='center'>
+              There are many agencies in the area who can offer other <a target='_blank' href='http://www.eckan.org/community_centers/coffey/?fbclid=IwAR0faTdVWL4iexGvhf-7yYYN6ocjQe9u8muNOX2XQgynfZp8XbJTtNDJ3kM' rel="noreferrer" className={classes.links}>assistance.</a>  
+              </Typography>
+          </Grid>
+          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} /> 
+      </Grid>
+
+      <Grid container className={classes.secondContainer}>
+        <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2} />
           <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={8} xl={8}>
               <Typography className={classes.facebookTitle} variant="h4" component="h2" gutterBottom align='center'>
                 Like us on Facebook!
