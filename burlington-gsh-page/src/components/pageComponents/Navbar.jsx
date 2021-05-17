@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
     color: "black",
     width: 300,
-    marginTop: 'auto',
+    marginTop: '12px',
     marginLeft: '7%',
     fontSize: 'min(5vw, 25px)',
     fontFamily: 'Open Sans',

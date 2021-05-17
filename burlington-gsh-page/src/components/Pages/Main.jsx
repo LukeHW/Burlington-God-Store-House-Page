@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 50
   },
   secondContainer: {
-    minHeight: "100vh",
+    minHeight: "70vh",
     backgroundColor: "rgba(255, 255, 255, 0.8)",
     fontFamily: 'Open Sans',
     padding: theme.spacing(0)
@@ -109,13 +109,13 @@ const useStyles = makeStyles((theme) => ({
     width: 300,
     height: 400,
     margin: 10,
-    transition: 'transform .2s',
+    transition: 'transform .5s',
     '&:hover': {
-      boxShadow: '0 0px 15px 0 rgba(255, 255, 255, 0.9)',
+      boxShadow: '0 0px 20px 0 rgba(0, 0, 0, 0.5)',
       transform: 'scale(1.1)'
     },
     '&:focus': {
-      boxShadow: '0 0px 20px 0 rgba(255, 255, 255, 0.7)',
+      boxShadow: '0 0px 20px 0 rgba(0, 0, 0, 0.5)',
       transform: 'scale(1.1)'
     },
     marginBottom: 150
@@ -144,7 +144,7 @@ const useStyles = makeStyles((theme) => ({
     transition: 'transform .2s',
     lineHeight: '1.5',
     '&:hover': {
-      backgroundColor: ('#d8d8d8')
+      backgroundColor: ('#f2f2f2')
     },
     '&:focus': {
       filter: 'opacity(0.8)'
@@ -173,7 +173,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Open Sans',
     textAlign: 'center',
     padding: 5,
-    marginTop: '250px'
+    marginTop: '150px'
   },
   infoContainer: {
     backgroundColor: '#f8f8f8',
