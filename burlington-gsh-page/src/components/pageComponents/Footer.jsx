@@ -10,15 +10,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     height: 60,
     width: "100%",
-    zIndex: 100
+    zIndex: 100,
+    fontFamily: 'Open Sans'
   },
   footer: {
     color: "white",
     width: 300,
     marginTop: 20,
     marginLeft: '7%',
-    fontSize: 15,
-    fontFamily: 'Open Sans'
+    fontSize: 15
   },
   footerLinks: {
     textDecoration: "none",

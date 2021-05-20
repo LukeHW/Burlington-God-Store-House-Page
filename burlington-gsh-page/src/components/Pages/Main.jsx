@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     fontSize: 'min(8vw, 32px)',
     color: "white",
-    fontFamily: 'Open Sans',
     textAlign: 'center',
     padding: 5
   },
@@ -37,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300,
     fontSize: 'min(5vw, 25px)',
     color: "white",
-    fontFamily: 'Open Sans',
     textAlign: "center",
     padding: 10,
   },
@@ -83,7 +81,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     display: "flex",
     marginTop: 30,
-    fontFamily: 'Open Sans',
     fontSize: 30,
     overflow: 'auto'
   },
@@ -170,7 +167,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontSize: 'min(8vw, 32px)',
     color: "black",
-    fontFamily: 'Open Sans',
     textAlign: 'center',
     padding: 5,
     marginTop: '150px'
@@ -184,7 +180,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 'min(8vw, 32px)',
     color: 'black',
     fontWeight: 400,
-    fontFamily: 'Open Sans',
     padding: 15,
     marginTop: 20
   },
@@ -192,7 +187,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     fontSize: 'min(8vw, 32px)',
     color: "black",
-    fontFamily: 'Open Sans',
     textAlign: 'center',
     padding: 5
   },
