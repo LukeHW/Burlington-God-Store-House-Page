@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
     color: "black",
     width: 300,
-    marginTop: '12px',
-    marginLeft: '7%',
+    marginTop: '5px',
+    marginLeft: '1%',
     fontSize: 'min(5vw, 25px)',
     fontWeight: 500,
-    display: 'block'
+    display: 'inline'
   },
   navbarLinks: {
     textDecoration: "none",
@@ -54,6 +54,7 @@ function Navbar() {
     <div className={classes.navbarActive}>
         <Grid container>
             <Grid item xs={6} sm={6} md={5} lg={4} xl={4} align="left">
+              <img alt="" border="0" src="/logo.png" width="60" height="50" />
               <Typography className={classes.navbar} variant="h5" component="h2" gutterBottom>
                   God's Store House
               </Typography>
