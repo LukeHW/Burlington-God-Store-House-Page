@@ -250,8 +250,7 @@ function Main() {
                 Clothes
               </Typography>
               <Typography className={classes.infoBody} variant="h1" component="h2" gutterBottom align='center'>
-                God's Storehouse has food available for any Coffey County Resident who is in need.  We offer breakfast items, lunch & dinner, canned fruit, misc. items and canned vegetables.  We also have hygeine items available such as toothpaste, toothbrushes, bar soap, dish soap, deodarant, shampoo, toilet paper and laundry detergent; these items are not constant, only when available.
-              </Typography>
+                God&#39;s Storehouse offers a wide variety of clothing items to Coffey County Residents who find themselves in need.  Items include infants clothing, school age children clothing as well as men&#39;s and women&#39;s items.  We have shoes available as well.  Socks, underwear, sheets, blankets, towels and washclothes are available by request.  These items can only be requested once a year as these items are limited.              </Typography>
           </Grid>
           <Grid item className={classes.infoSpace} xs={12} sm={12} md={12} lg={4} xl={4}>
               <img className={classes.icons} src="/foodIcon.png" alt="Food and Produce" />
@@ -259,7 +258,7 @@ function Main() {
                 Food
               </Typography>
               <Typography className={classes.infoBody} variant="h1" component="h2" gutterBottom align='center'>
-                God's Storehouse has food available for any Coffey County Resident who is in need.  We offer breakfast items, lunch & dinner, canned fruit, misc. items and canned vegetables.  We also have hygeine items available such as toothpaste, toothbrushes, bar soap, dish soap, deodarant, shampoo, toilet paper and laundry detergent; these items are not constant, only when available.
+                God&#39;s Storehouse has food available for any Coffey County Resident who is in need.  We offer breakfast items, lunch & dinner, canned fruit, misc. items and canned vegetables.  We also have hygeine items available such as toothpaste, toothbrushes, bar soap, dish soap, deodarant, shampoo, toilet paper and laundry detergent; these items are not constant, only when available.
               </Typography>
           </Grid>
           <Grid item className={classes.infoSpace} xs={12} sm={12} md={12} lg={3} xl={3}>

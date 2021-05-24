@@ -1,8 +1,12 @@
 // import modules
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Button from '@material-ui/core/Button';
+import Avatar from "@material-ui/core/Avatar";
+import { Link } from "react-router-dom";
 
 // styles for Footer.js
 const useStyles = makeStyles((theme) => ({
@@ -48,12 +52,73 @@ const useStyles = makeStyles((theme) => ({
   },
   navbarLogo: {
     marginLeft: '2%'
-  }
+  },
+  menuBox: {
+    width: "100%",
+    height: 200,
+    position: "fixed",
+    zIndex: 100
+  },
+  menuContainerHidden: {
+    display: "none"
+  },
+  menuContainerShown: {
+    width: "100%",
+    minWidth: '200px',
+    height: 200,
+    backgroundColor: "rgba(20, 20, 20, 0.75)",
+    backdropFilter: "blur(15px)",
+    position: "fixed",
+    marginTop: 60,
+    zIndex: 100,
+    right: '0px'
+  },
+  menuLink: {
+    textDecoration: "none",
+    fontWeight: "lighter",
+    color: "white",
+    fontSize: 22,
+    textAlign: "right",
+    '&:hover': {
+      color: 'rgba(220, 220, 220)'
+    },
+    '&:focus': {
+      color: 'rgba(220, 220, 220)'
+    }
+  },
+  menuLinkSpacer: {
+    marginRight: "8vw",
+    marginTop: "22px",
+    '&::after': {
+      width: '100%',
+      backgroundColor: 'rgba(180, 180, 180)'
+    }
+  },
 }));
 
 function Navbar() {
 
+  const [navbar, setNavbar] = useState(false);
+  const [menu, setMenu] = useState(false);
+
+  const [isOpen, setOpen] = useState(false);
+
   const classes = useStyles();
+
+  const changeNavbarBackground = () => {
+    if(window.scrollY >= 80) {
+        setNavbar(true);
+    }else {
+        setNavbar(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeNavbarBackground);
+
+  const closeMenuHandler = () => {
+    setMenu(false);
+    setOpen(false);
+  }
 
   return (
     <div className={classes.navbarActive}>
@@ -74,6 +139,22 @@ function Navbar() {
               </form>
               </div>
             </Grid> 
+
+            <Hidden mdUp>
+            <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
+                <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                        <Link to="/Work" className={classes.menuLink} onClick={closeMenuHandler}>Work</Link>
+                    </Typography>
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                        <Link to="/About" className={classes.menuLink} onClick={closeMenuHandler}>About</Link>
+                    </Typography>
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                        <Link to="/Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
+                    </Typography>
+                </Grid>
+            </Grid>
+        </Hidden>
         </Grid>
     </div>
   );
