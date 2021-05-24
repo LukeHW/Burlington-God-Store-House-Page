@@ -16,12 +16,14 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: {
     color: "black",
-    width: 300,
-    marginTop: '5px',
-    marginLeft: '1%',
+    width: 250,
     fontSize: 'min(5vw, 25px)',
     fontWeight: 500,
-    display: 'inline'
+    marginLeft: '2%'
+  },
+  navbarCentered: {
+    display: 'flex',
+    alignItems: 'center'
   },
   navbarLinks: {
     textDecoration: "none",
@@ -43,6 +45,9 @@ const useStyles = makeStyles((theme) => ({
   iconsContainer: {
     marginTop: 5,
     marginRight: '7%'
+  },
+  navbarLogo: {
+    marginLeft: '2%'
   }
 }));
 
@@ -53,9 +58,9 @@ function Navbar() {
   return (
     <div className={classes.navbarActive}>
         <Grid container>
-            <Grid item xs={6} sm={6} md={5} lg={4} xl={4} align="left">
-              <img alt="" border="0" src="/logo.png" width="60" height="50" />
-              <Typography className={classes.navbar} variant="h5" component="h2" gutterBottom>
+            <Grid item className={classes.navbarCentered} xs={6} sm={6} md={5} lg={4} xl={4} align="left">
+              <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
+              <Typography className={classes.navbar} variant="h5" component="h2">
                   God's Store House
               </Typography>
             </Grid>
