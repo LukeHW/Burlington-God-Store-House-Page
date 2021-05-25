@@ -9,7 +9,7 @@ import './App.css';
 // import components
 import Main from './components/Pages/Main';
 import ThankYou from './components/Pages/ThankYou';
-import Resources from './components/Pages/Resources';
+import Location from './components/Pages/Location';
 import Page from './components/pageComponents/Page';
 import Footer from './components/pageComponents/Footer';
 import Navbar from './components/pageComponents/Navbar';
@@ -22,9 +22,9 @@ function App() {
 
   return (
     <Router>
+      <Navbar />
       <Switch>
         <Route exact path="/">
-          <Navbar />
           <Page>
             <Main />
           </Page>
@@ -36,7 +36,7 @@ function App() {
         </Route>
         <Route exact path="/Resources">
           <Page>
-            <Resources />
+            <Location />
           </Page>
         </Route>
       </Switch>

@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${bg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundAttachment: "fixed",
+    backgroundAttachment: "fixed"
   },
   paperContainerOverlay: {
     backgroundColor: "rgba(0, 0, 0, 0.5)"
@@ -103,7 +103,8 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   paperLinks: {
-    width: 300,
+    width: '90vw',
+    maxWidth: 300,
     height: 400,
     margin: 10,
     transition: 'transform .5s',

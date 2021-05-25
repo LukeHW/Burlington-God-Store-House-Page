@@ -68,7 +68,7 @@ function ThankYou() {
               <Typography className={classes.spacerTextBody} variant="h4" component="h6" gutterBottom>
                 Again, THANK YOU!
               </Typography>
-              <a target='_blank' href='https://www.godsstorehousebks.com' rel="noreferrer" className={classes.links}>
+              <a href='https://www.godsstorehousebks.com' rel="noreferrer" className={classes.links}>
                   Back to main page
               </a>
           </Grid>

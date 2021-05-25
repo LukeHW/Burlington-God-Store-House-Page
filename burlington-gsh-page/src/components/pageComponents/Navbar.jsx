@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     zIndex: 100,
     position: 'fixed',
-    fontFamily: 'Open Sans'
+    fontFamily: 'Open Sans',
+    overflow: 'hidden'
   },
   navbar: {
     color: "black",
@@ -95,6 +96,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: 'rgba(180, 180, 180)'
     }
   },
+  navbarContainer: {
+    overflow: 'hidden'
+  }
 }));
 
 function Navbar() {
@@ -106,24 +110,21 @@ function Navbar() {
 
   const classes = useStyles();
 
-  const changeNavbarBackground = () => {
-    if(window.scrollY >= 80) {
-        setNavbar(true);
-    }else {
-        setNavbar(false);
-    }
-  };
-
-  window.addEventListener('scroll', changeNavbarBackground);
-
   const closeMenuHandler = () => {
     setMenu(false);
     setOpen(false);
   }
 
+  // paypal button jsx
+  // <form action="https://www.paypal.com/donate" method="post" target="_top">
+  //   <input type="hidden" name="hosted_button_id" value="APFAUEJRPFTJW" />
+  //   <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+  //   <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+  // </form>
+
   return (
     <div className={classes.navbarActive}>
-        <Grid container>
+        <Grid className={classes.navbarContainer} container>
             <Grid item className={classes.navbarCentered} xs={6} sm={6} md={5} lg={4} xl={4} align="left">
               <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
               <Typography className={classes.navbar} variant="h5" component="h2">
@@ -133,29 +134,25 @@ function Navbar() {
             <Grid item xs={0} sm={0} md={2} lg={4} xl={4} align="left"></Grid>
             <Grid item xs={6} sm={6} md={5} lg={4} xl={4} align="right">
               <div className={classes.iconsContainer}>
-              <form action="https://www.paypal.com/donate" method="post" target="_top">
-                <input type="hidden" name="hosted_button_id" value="APFAUEJRPFTJW" />
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-              </form>
+                <div className={classes.hamburgerContainer}>
+                  <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#000000" label="Show menu" marginTop="20px" direction="right" />
+                </div>
               </div>
             </Grid> 
 
-            <Hidden mdUp>
             <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
-                <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
+                <Grid item className={classes.menuBox} xs={12} sm={12} md={12} lg={12} xl={12} align="right">
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/Work" className={classes.menuLink} onClick={closeMenuHandler}>Work</Link>
-                    </Typography>
-                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/About" className={classes.menuLink} onClick={closeMenuHandler}>About</Link>
+                        <Link to="/" className={classes.menuLink} onClick={closeMenuHandler}>About</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
                     </Typography>
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                        <Link to="/Location" className={classes.menuLink} onClick={closeMenuHandler}>Location</Link>
+                    </Typography>
                 </Grid>
             </Grid>
-        </Hidden>
         </Grid>
     </div>
   );
