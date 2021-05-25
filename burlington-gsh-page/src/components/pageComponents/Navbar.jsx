@@ -7,6 +7,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 import Avatar from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
+import { Spin as Hamburger } from 'hamburger-react';
 
 // styles for Footer.js
 const useStyles = makeStyles((theme) => ({
