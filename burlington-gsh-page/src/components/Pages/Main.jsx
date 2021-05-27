@@ -213,10 +213,10 @@ function Main() {
             <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
             <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
               <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
-                God&#39;s Store House - About Us
+                About Us
               </Typography>
               <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-                Burlington, KS
+              God&#39;s Storehouse - Burlington, KS
               </Typography>
             </Grid>
             <Hidden mdUp>

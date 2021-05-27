@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 15
   },
   iconsContainer: {
-    marginTop: 5,
+    marginTop: 8,
     marginRight: '7%'
   },
   navbarLogo: {
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuBox: {
     width: "100%",
-    height: 200,
+    height: 300,
     position: "fixed",
     zIndex: 100
   },
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
   menuContainerShown: {
     width: "100%",
     minWidth: '200px',
-    height: 200,
+    height: 220,
     backgroundColor: "rgba(20, 20, 20, 0.75)",
     backdropFilter: "blur(15px)",
     position: "fixed",
@@ -102,8 +102,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Navbar() {
-
-  const [navbar, setNavbar] = useState(false);
   const [menu, setMenu] = useState(false);
 
   const [isOpen, setOpen] = useState(false);
@@ -121,6 +119,9 @@ function Navbar() {
   //   <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
   //   <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
   // </form>
+  // <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+  //     <Link to="/Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
+  // </Typography>
 
   return (
     <div className={classes.navbarActive}>
@@ -128,11 +129,11 @@ function Navbar() {
             <Grid item className={classes.navbarCentered} xs={6} sm={6} md={5} lg={4} xl={4} align="left">
               <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
               <Typography className={classes.navbar} variant="h5" component="h2">
-                  God's Store House
+                  God's Storehouse
               </Typography>
             </Grid>
-            <Grid item xs={0} sm={0} md={2} lg={4} xl={4} align="left"></Grid>
-            <Grid item xs={6} sm={6} md={5} lg={4} xl={4} align="right">
+            <Grid item xs="auto" sm="auto" md={2} lg={4} xl={4} align="left"></Grid>
+            <Grid item className={classes.navbarContainer} xs={6} sm={6} md={5} lg={4} xl={4} align="right">
               <div className={classes.iconsContainer}>
                 <div className={classes.hamburgerContainer}>
                   <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#000000" label="Show menu" marginTop="20px" direction="right" />
@@ -146,11 +147,13 @@ function Navbar() {
                         <Link to="/" className={classes.menuLink} onClick={closeMenuHandler}>About</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
-                    </Typography>
-                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/Location" className={classes.menuLink} onClick={closeMenuHandler}>Location</Link>
                     </Typography>
+                    <form className={classes.menuLinkSpacer} action="https://www.paypal.com/donate" method="post" target="_top">
+                     <input type="hidden" name="hosted_button_id" value="APFAUEJRPFTJW" />
+                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                     <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
                 </Grid>
             </Grid>
         </Grid>

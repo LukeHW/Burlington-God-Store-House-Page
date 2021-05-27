@@ -29,12 +29,12 @@ function App() {
             <Main />
           </Page>
         </Route>
-        <Route exact path="/thankyou">
+        <Route exact path="/ThankYou">
           <Page>
             <ThankYou />
           </Page>
         </Route>
-        <Route exact path="/Resources">
+        <Route exact path="/Location">
           <Page>
             <Location />
           </Page>
