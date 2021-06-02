@@ -4,19 +4,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
+import Map from '../pageComponents/Map';
+
+
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
   container: {
     minHeight: "100vh",
-    backgroundColor: ('#222222'),
+    backgroundColor: ('#eeeeee'),
     fontFamily: 'Open Sans',
     padding: theme.spacing(0)
   },
   spacer: {
-    flexDirection: "column",
-    justifyContent: "center",
     alignItems: "center",
-    display: "flex"
   },
   spacerText: {
     fontWeight: 500,
@@ -43,8 +43,29 @@ const useStyles = makeStyles((theme) => ({
     },
     '&:focus': {
       filter: 'contrast(50%)'
-    },
-  }
+    }
+   },
+   bodyHeader: {
+     fontWeight: 600,
+     fontSize: 40,
+     textAlign: 'left',
+     marginLeft: '2%',
+     marginTop: '200px',
+     marginBottom: '30px'
+   },
+   bodySubHeader: {
+    fontWeight: 400,
+    fontSize: 30,
+    textAlign: 'left',
+    marginLeft: '2%',
+    marginBottom: '30px'
+   },
+   mapContainer: {
+       width: '95%',
+       height: '90%',
+       align: 'center',
+       margin: 'auto'
+   }
 }));
 
 function Location() {
@@ -54,11 +75,19 @@ function Location() {
   return (
     <div className="App">
       <Grid container className={classes.container}>
-        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-          <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={10} xl={10}>
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.6673684477432!2d-95.74307288387685!3d38.19439999567677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b920127a3cfa7d%3A0xffb745052076f7fb!2s515%20Neosho%20St%2C%20Burlington%2C%20KS%2066839!5e0!3m2!1sen!2sus!4v1622049361006!5m2!1sen!2sus" width="600" height="450" style={{border: 0}} allowfullscreen="" loading="lazy"></iframe>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
+            <Typography className={classes.bodyHeader} variant="h1" component="h2" align='left'>
+                Our Location
+            </Typography>
+            <Typography className={classes.bodySubHeader} variant="h1" component="h2" align='left'>
+                515 Neosho St, Burlington, KS 66839
+            </Typography>
+        </Grid>
+          <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>
+              <div className={classes.mapContainer}>
+                <Map />
+              </div>
           </Grid>
-          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
       </Grid>
     </div>
   );
