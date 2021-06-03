@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => <div style={{ marginLeft: '-15px', marginTop: '-55px' }}><img width='30px' height='60px' marginLeft='-30px' src="/googleMapIcon.svg" alt="Our Location" /></div>;
-
-const handleApiLoaded = (map, maps) => {
-    // use map and maps objects
-  };
+const AnyReactComponent = ({ text }) => <div style={{ marginLeft: '-15px', marginTop: '-55px' }}><img width='30px' height='60px' src="/googleMapIcon.svg" alt="Our Location" /></div>;
 
 class Map extends Component {
   static defaultProps = {
@@ -25,7 +21,6 @@ class Map extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           yesIWantToUseGoogleMapApiInternals
-          onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
         >
           <AnyReactComponent
             lat={38.194446}
