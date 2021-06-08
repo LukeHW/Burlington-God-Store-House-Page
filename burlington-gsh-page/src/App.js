@@ -13,6 +13,7 @@ import Location from './components/Pages/Location';
 import Page from './components/pageComponents/Page';
 import Footer from './components/pageComponents/Footer';
 import Navbar from './components/pageComponents/Navbar';
+import Resources from './components/Pages/Resources';
 
 // styles for App.js
 const useStyles = makeStyles((theme) => ({}));
@@ -37,6 +38,11 @@ function App() {
         <Route exact path="/Location">
           <Page>
             <Location />
+          </Page>
+        </Route>
+        <Route exact path="/Resources">
+          <Page>
+            <Resources />
           </Page>
         </Route>
       </Switch>

@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import IconButton from '@material-ui/core/IconButton';
+import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import Map from '../pageComponents/Map';
 
@@ -16,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0)
   },
   spacer: {
-    alignItems: "center",
+    alignContent: "center"
   },
   spacerText: {
     fontWeight: 500,
@@ -50,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
      fontSize: 40,
      textAlign: 'left',
      marginLeft: '2%',
-     marginTop: '200px',
+     marginTop: '130px',
      marginBottom: '30px'
    },
    bodySubHeader: {
@@ -58,13 +61,21 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 30,
     textAlign: 'left',
     marginLeft: '2%',
-    marginBottom: '30px'
+    marginBottom: 1
    },
    mapContainer: {
-       width: '95%',
-       height: '90%',
-       align: 'center',
-       margin: 'auto'
+       width: '80%',
+       height: '100%',
+       marginLeft: 'auto',
+       marginRight: 'auto',
+       display: 'block'
+   },
+   copyButton: {
+       margin: 10,
+       padding: 10,
+   },
+   titleContainer: {
+       height: '150px'
    }
 }));
 
@@ -72,15 +83,22 @@ function Location() {
 
   const classes = useStyles();
 
+  const address = "515 Neosho St, Burlington, KS 66839"
+
   return (
     <div className="App">
       <Grid container className={classes.container}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
+        <Grid className={classes.titleContainer} item xs={12} sm={12} md={12} lg={12} xl={12} >
             <Typography className={classes.bodyHeader} variant="h1" component="h2" align='left'>
                 Our Location
             </Typography>
             <Typography className={classes.bodySubHeader} variant="h1" component="h2" align='left'>
-                515 Neosho St, Burlington, KS 66839
+                {address}
+                <Tooltip title="Copy Address" placement="right" arrow>
+                    <IconButton className={classes.copyButton} aria-label='copy' onClick={() => {navigator.clipboard.writeText(address)}}>
+                        <FileCopyOutlinedIcon />
+                    </IconButton>
+                </Tooltip>
             </Typography>
         </Grid>
           <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>

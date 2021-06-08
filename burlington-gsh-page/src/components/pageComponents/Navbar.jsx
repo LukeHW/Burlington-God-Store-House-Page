@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: {
     color: "black",
-    width: 250,
     fontSize: 'min(5vw, 25px)',
     fontWeight: 500,
     marginLeft: '2%'
@@ -67,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   menuContainerShown: {
     width: "100%",
     minWidth: '200px',
-    height: 220,
+    height: 260,
     backgroundColor: "rgba(20, 20, 20, 0.75)",
     backdropFilter: "blur(15px)",
     position: "fixed",
@@ -98,6 +97,10 @@ const useStyles = makeStyles((theme) => ({
   },
   navbarContainer: {
     overflow: 'hidden'
+  },
+  homeLink: {
+    textDecoration: 'none',
+    color: 'black'
   }
 }));
 
@@ -127,9 +130,11 @@ function Navbar() {
     <div className={classes.navbarActive}>
         <Grid className={classes.navbarContainer} container>
             <Grid item className={classes.navbarCentered} xs={6} sm={6} md={5} lg={4} xl={4} align="left">
-              <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
+              <a href='/' className={classes.homeLink}>
+                <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
+              </a>
               <Typography className={classes.navbar} variant="h5" component="h2">
-                  God's Storehouse
+                <a href='/' className={classes.homeLink}> God's Storehouse </a>
               </Typography>
             </Grid>
             <Grid item xs="auto" sm="auto" md={2} lg={4} xl={4} align="left"></Grid>
@@ -148,6 +153,9 @@ function Navbar() {
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/Location" className={classes.menuLink} onClick={closeMenuHandler}>Location</Link>
+                    </Typography>
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                        <Link to="/Resources" className={classes.menuLink} onClick={closeMenuHandler}>Resources</Link>
                     </Typography>
                     <form className={classes.menuLinkSpacer} action="https://www.paypal.com/donate" method="post" target="_top">
                      <input type="hidden" name="hosted_button_id" value="APFAUEJRPFTJW" />
