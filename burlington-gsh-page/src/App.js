@@ -14,6 +14,7 @@ import Page from './components/pageComponents/Page';
 import Footer from './components/pageComponents/Footer';
 import Navbar from './components/pageComponents/Navbar';
 import Resources from './components/Pages/Resources';
+import ScrollToTop from './components/pageComponents/Scroll';
 
 // styles for App.js
 const useStyles = makeStyles((theme) => ({}));
@@ -21,8 +22,13 @@ const useStyles = makeStyles((theme) => ({}));
 function App() {
   const classes = useStyles();
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
+
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Switch>
         <Route exact path="/">

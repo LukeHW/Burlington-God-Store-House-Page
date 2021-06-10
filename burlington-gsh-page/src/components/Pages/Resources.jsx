@@ -42,6 +42,21 @@ const useStyles = makeStyles((theme) => ({
     '&:focus': {
       filter: 'contrast(50%)'
     },
+  },
+  resources: {
+    maxWidth: '400px',
+    minWidth: '150px',
+    width: '90%',
+    padding: 15,
+    marginBottom: 40
+  },
+  resourcesContainer: {
+
+  },
+  resourcesTitle: {
+    fontSize: 20,
+    fontWeight: 500,
+    color: 'black'
   }
 }));
 
@@ -59,6 +74,30 @@ function Resources() {
               </Typography>
           </Grid>
           <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  Mobile Resource Bus
+                </Typography>
+                <img className={classes.resources} alt="" border="0" src="/MRB Info.jpg" />
+              </Grid>
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  Coffey County Transportation
+                </Typography>
+                <img className={classes.resources} alt="" border="0" src="/CCT Info.jpg" />
+              </Grid>
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  Coffey County Resource Council
+                </Typography>
+                <img className={classes.resources} alt="" border="0" src="/CCRC Info.jpg" />
+              </Grid>
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  Harvester's Acceptance Form
+                </Typography>
+                <img className={classes.resources} alt="" border="0" src="/Harvester's Info.jpg" />
+              </Grid>
       </Grid>
     </div>
   );
