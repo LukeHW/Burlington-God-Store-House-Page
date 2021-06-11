@@ -57,7 +57,7 @@ function ThankYou() {
         <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
           <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={10} xl={10}>
               <Typography className={classes.spacerText} variant="h4" component="h2" gutterBottom>
-                Thank you for your donation to God's Store House!
+                Thank you for your donation to God&#39;s Store House!
               </Typography>
               <Typography className={classes.spacerTextBody} variant="h4" component="h6" gutterBottom>
                 At God&#39;s Store House,  We average around 139 families/390 people per month.

@@ -50,32 +50,32 @@ const useStyles = makeStyles((theme) => ({
    },
    bodyHeader: {
      fontWeight: 600,
-     fontSize: 40,
+     fontSize: 'min(6vw, 40px)',
      textAlign: 'left',
-     marginLeft: '2%',
+     marginLeft: '4%',
      marginTop: '130px',
-     marginBottom: '30px'
+     marginBottom: 'min(4vw, 20px)'
    },
    bodySubHeader: {
     fontWeight: 400,
-    fontSize: 30,
+    fontSize: 'min(4vw, 30px)',
     textAlign: 'left',
-    marginLeft: '2%',
-    marginBottom: 1
+    marginLeft: '4%'
    },
    mapContainer: {
        width: '80%',
+       maxWidth: '1400px',
        height: '100%',
        marginLeft: 'auto',
        marginRight: 'auto',
-       display: 'block'
+       marginBottom: '100px'
    },
    copyButton: {
        margin: 10,
        padding: 10,
    },
    titleContainer: {
-       height: '150px'
+       height: '250px'
    }
 }));
 

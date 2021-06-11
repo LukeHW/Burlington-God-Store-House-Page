@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   spacerText: {
     fontWeight: 500,
-    fontSize: 'min(10vw, 70px)',
+    fontSize: 'min(14vw, 70px)',
     textAlign: 'left',
     color: 'black',
     padding: 15,
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 
   },
   resourcesTitle: {
-    fontSize: 20,
+    fontSize: 'min(6vw, 20px)',
     fontWeight: 500,
     color: 'black'
   }
@@ -94,9 +94,9 @@ function Resources() {
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
-                  Harvester's Acceptance Form
+                  Harvester&#39;s Acceptance Form
                 </Typography>
-                <img className={classes.resources} alt="" border="0" src="/Harvester's Info.jpg" />
+                <img className={classes.resources} alt="" border="0" src="/Harvester's Info 2.jpg" />
               </Grid>
       </Grid>
     </div>

@@ -13,7 +13,7 @@ import { Spin as Hamburger } from 'hamburger-react';
 const useStyles = makeStyles((theme) => ({
   navbarActive: {
     backgroundColor: "rgba(255, 255, 255, 0.95)",
-    height: 60,
+    height: 85,
     width: "100%",
     zIndex: 100,
     position: 'fixed',
@@ -52,7 +52,10 @@ const useStyles = makeStyles((theme) => ({
     marginRight: '7%'
   },
   navbarLogo: {
-    marginLeft: '2%'
+    marginLeft: '2%',
+    display: 'inline',
+    height: '100%',
+    verticalAlign: 'middle'
   },
   menuBox: {
     width: "100%",
@@ -70,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(20, 20, 20, 0.75)",
     backdropFilter: "blur(15px)",
     position: "fixed",
-    marginTop: 60,
+    marginTop: 85,
     zIndex: 100,
     right: '0px'
   },
@@ -100,7 +103,24 @@ const useStyles = makeStyles((theme) => ({
   },
   homeLink: {
     textDecoration: 'none',
-    color: 'black'
+    color: 'black',
+    display: 'inline',
+    height: '100%',
+    verticalAlign: 'middle'
+  },
+  navbarContact: {
+    fontWeight: 400,
+    fontSize: 'min(2.5vw, 12px)',
+    color: 'white',
+    marginRight: '5%',
+    display: 'inline',
+    height: '100%',
+    verticalAlign: 'middle'
+  },
+  navbarContactBar: {
+    backgroundColor: "rgba(20, 20, 20, 0.85)",
+    width: '100%',
+    height: '25px'
   }
 }));
 
@@ -129,16 +149,21 @@ function Navbar() {
   return (
     <div className={classes.navbarActive}>
         <Grid className={classes.navbarContainer} container>
-            <Grid item className={classes.navbarCentered} xs={6} sm={6} md={5} lg={4} xl={4} align="left">
+        <Grid item className={classes.navbarContactBar} xs={12} sm={12} md={12} lg={12} xl={12} align="right"> 
+          <Typography className={classes.navbarContact} variant="h5" component="h2">
+            (620) 364-1459 &#8226; 515 Neosho St, Burlington, KS &#8226; godsstorehousebks@gmail.com 
+          </Typography>
+        </Grid>
+            <Grid item className={classes.navbarCentered} xs={8} sm={8} md={5} lg={4} xl={4} align="left">
               <a href='/' className={classes.homeLink}>
                 <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
               </a>
               <Typography className={classes.navbar} variant="h5" component="h2">
-                <a href='/' className={classes.homeLink}> God's Storehouse </a>
+                <a href='/' className={classes.homeLink}> God&#39;s Storehouse </a>
               </Typography>
             </Grid>
-            <Grid item xs="auto" sm="auto" md={2} lg={4} xl={4} align="left"></Grid>
-            <Grid item className={classes.navbarContainer} xs={6} sm={6} md={5} lg={4} xl={4} align="right">
+            <Grid item xs="auto" sm="auto" md={2} lg={4} xl={4} align="left" />
+            <Grid item className={classes.navbarContainer} xs={4} sm={4} md={5} lg={4} xl={4} align="right">
               <div className={classes.iconsContainer}>
                 <div className={classes.hamburgerContainer}>
                   <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#000000" label="Show menu" marginTop="20px" direction="right" />

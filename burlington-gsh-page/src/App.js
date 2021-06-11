@@ -22,10 +22,6 @@ const useStyles = makeStyles((theme) => ({}));
 function App() {
   const classes = useStyles();
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  })
-
   return (
     <Router>
       <ScrollToTop />
