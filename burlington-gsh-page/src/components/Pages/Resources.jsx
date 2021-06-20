@@ -88,15 +88,21 @@ function Resources() {
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
-                  Coffey County Resource Council
+                  LifeCare Van
                 </Typography>
-                <img className={classes.resources} alt="" border="0" src="/CCRC Info.jpg" />
+                <img className={classes.resources} alt="" border="0" src="/LCV Info.jpg" />
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Harvester&#39;s Acceptance Form
                 </Typography>
                 <img className={classes.resources} alt="" border="0" src="/Harvester's Info 2.jpg" />
+              </Grid>
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                Coffey County Resource Council
+                </Typography>
+                <img className={classes.resources} alt="" border="0" src="/CCRC Info.jpg" />
               </Grid>
       </Grid>
     </div>

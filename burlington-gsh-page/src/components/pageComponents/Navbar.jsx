@@ -121,6 +121,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(20, 20, 20, 0.85)",
     width: '100%',
     height: '25px'
+  },
+  navbarContactLinks: {
+    textDecoration: 'none',
+    color: 'white',
+    padding: 2
   }
 }));
 
@@ -151,7 +156,9 @@ function Navbar() {
         <Grid className={classes.navbarContainer} container>
         <Grid item className={classes.navbarContactBar} xs={12} sm={12} md={12} lg={12} xl={12} align="right"> 
           <Typography className={classes.navbarContact} variant="h5" component="h2">
-            (620) 364-1459 &#8226; 515 Neosho St, Burlington, KS &#8226; godsstorehousebks@gmail.com 
+            <a className={classes.navbarContactLinks} href="tel:6203641459">(620) 364-1459</a> &#8226; 
+            <a className={classes.navbarContactLinks} target="blank" href="https://www.google.com/search?q=515+Neosho+St%2C+Burlington%2C+KS">515 Neosho St, Burlington, KS</a> &#8226; 
+            <a className={classes.navbarContactLinks} href = "mailto: godsstorehousebks@gmail.com">godsstorehousebks@gmail.com</a>
           </Typography>
         </Grid>
             <Grid item className={classes.navbarCentered} xs={8} sm={8} md={5} lg={4} xl={4} align="left">
