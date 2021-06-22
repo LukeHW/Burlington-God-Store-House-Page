@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navbarContact: {
     fontWeight: 400,
-    fontSize: 'min(2.5vw, 12px)',
+    fontSize: 'min(2.3vw, 12px)',
     color: 'white',
     marginRight: '5%',
     display: 'inline',

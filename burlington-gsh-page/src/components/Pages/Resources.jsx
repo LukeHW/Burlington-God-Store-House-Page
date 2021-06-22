@@ -100,7 +100,7 @@ function Resources() {
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
-                Coffey County Resource Council
+                  Coffey County Resource Council
                 </Typography>
                 <img className={classes.resources} alt="" border="0" src="/CCRC Info.jpg" />
               </Grid>

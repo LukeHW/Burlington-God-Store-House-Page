@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import Carousel from 'react-material-ui-carousel';
 import { Button, Paper } from '@material-ui/core';
+import DemoCarousel from '../pageComponents/DemoCarousel';
 
 // import components
 import bg from '../../testBG2.jpg';
@@ -15,13 +15,13 @@ const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between",
     fontFamily: 'Open Sans',
-    height: 1200
+    height: '100%'
   },
   paperContainer: {
     backgroundImage: `url(${bg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+    backgroundAttachment: "fixed",
   },
   paperContainerOverlay: {
     backgroundColor: "rgba(0, 0, 0, 0.5)"
@@ -123,19 +123,30 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   spacerText: {
-    fontWeight: 500,
-    fontSize: 'min(10vw, 32px)',
-    textAlign: 'center',
-    color: 'white',
-    marginTop: 50,
-    padding: 15
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    padding: 15,
+    flexDirection: "column",
+    justifyContent: 'center',
+    display: "flex",
   },
   spacerTextBody: {
-    fontWeight: 300,
+    fontWeight: 400,
     fontSize: 'min(4vw, 20px)',
     textAlign: 'center',
     color: 'white',
-    padding: 25 
+    width: '95%',
+    padding: 10,
+    maxWidth: 800,
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  spacerTextHeader: {
+    fontWeight: 600,
+    fontSize: 'min(6vw, 32px)',
+    textAlign: 'center',
+    color: 'white',
+    width: '95%',
+    padding: 10
   },
   links: {
     paddingTop: 5,
@@ -198,6 +209,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: 'black',
     padding: 25 
+  },
+  carousel: {
+    backgroundColor: "rgba(255, 255, 255, 0.8)"
+  },
+  navbarSpace: {
+    height: 100
   }
 }));
 
@@ -211,34 +228,26 @@ function Main() {
       <div className={classes.paperContainerOverlay}>
         <div className="AppBG">
           <Grid container className={classes.container}>
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
-            <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
-              <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
-                About Us
-              </Typography>
-              <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-              God&#39;s Storehouse - Burlington, KS
-              </Typography>
-            </Grid>
-            <Hidden mdUp>
-              <Grid item xs="auto" sm="auto" />
-            </Hidden>
-            <Grid item className={classes.placerContainer} xs={12} sm={12} md={12} lg={12} xl={12} align="center">
-            <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2} />
-          <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={8} xl={8}>
-              <Typography className={classes.spacerTextBody} variant="h4" component="h6" gutterBottom>
-                At God&#39;s Storehouse in Burlington, Kansas, we serve residents living in Coffey County who find themselves in need. God&#39;s Storehouse operates under the Coffey County Evangelical Ministerial Association. In 2018 our current building was donated to us. In April of 2020 GSH celebrated their 15th year of service in Coffey County. Our current address is 515 Neosho Street in Burlington, Kansas. Our hours are Monday thru Friday, 9am – 12pm, and every Tuesday evening 5pm - 7pm. God has blessed us with 35 to 40 volunteers who operate our store.
-              </Typography>
-              <Typography className={classes.spacerTextBody} variant="h4" component="h6" gutterBottom>
-                We utilize a card system to record contact and family information. Families can receive food once a month according to our designated guidelines. Along with food we also provide: clothing, shoes, bedding, pots, pans, plates, drinking glasses, and silverware that are donated from the various churches, schools, organizations, and individuals from Coffey County. Several churches and individuals donate money monthly. We operate solely from donations.
-              </Typography>
-              <Typography className={classes.spacerTextBody} variant="h4" component="h6" gutterBottom>
-                We average around 139 families/390 people per month.
-              </Typography>
+          <Grid item className={classes.navbarSpace} xs={12} sm={12} md={12} lg={12} xl={12} />
+          <Grid item className={classes.carousel} xs={12} sm={12} md={12} lg={7} xl={7}>
+            <DemoCarousel />
           </Grid>
-          <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2} />
-            </Grid>
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+
+          <Grid item className={classes.spacerText} xs={12} sm={12} md={12} lg={5} xl={5}>
+            <Typography className={classes.spacerTextHeader} variant="h1" component="h1" gutterBottom>
+              About Us
+            </Typography>
+            <Typography className={classes.spacerTextBody} variant="h4" component="h6" gutterBottom>
+              At God&#39;s Storehouse in Burlington, Kansas, we serve residents living in Coffey County who find themselves in need. God&#39;s Storehouse operates under the Coffey County Evangelical Ministerial Association. In 2018 our current building was donated to us. In April of 2020 GSH celebrated their 15th year of service in Coffey County. Our current address is 515 Neosho Street in Burlington, Kansas. Our hours are Monday thru Friday, 9am – 12pm, and every Tuesday evening 5pm - 7pm. God has blessed us with 35 to 40 volunteers who operate our store.
+            </Typography>
+            <Typography className={classes.spacerTextBody} variant="h4" component="h6" gutterBottom>
+              We utilize a card system to record contact and family information. Families can receive food once a month according to our designated guidelines. Along with food we also provide: clothing, shoes, bedding, pots, pans, plates, drinking glasses, and silverware that are donated from the various churches, schools, organizations, and individuals from Coffey County. Several churches and individuals donate money monthly. We operate solely from donations.
+            </Typography>
+            <Typography className={classes.spacerTextBody} variant="h4" component="h6" gutterBottom>
+              We average around 139 families/390 people per month.
+            </Typography>
+          </Grid>
+          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
           </Grid>
         </div>
         </div>
@@ -270,7 +279,7 @@ function Main() {
                 Information
               </Typography>
               <Typography className={classes.infoBody} variant="h1" component="h2" gutterBottom align='center'>
-              There are many agencies in the area who can offer other <a target='_blank' href='http://www.eckan.org/community_centers/coffey/?fbclid=IwAR0faTdVWL4iexGvhf-7yYYN6ocjQe9u8muNOX2XQgynfZp8XbJTtNDJ3kM' rel="noreferrer" className={classes.links}>assistance.</a>  
+                There are many agencies in the area who can offer other <a href='/Resources' rel="noreferrer" className={classes.links}>assistance.</a>  
               </Typography>
           </Grid>
           <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} /> 
