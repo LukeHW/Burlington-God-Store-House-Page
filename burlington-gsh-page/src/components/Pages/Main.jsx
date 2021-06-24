@@ -58,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center"
   },
   icons: {
-    width: 100
+    width: 100,
+    height: 100
   },
   iconsInline: {
     width: 50,
@@ -132,7 +133,7 @@ const useStyles = makeStyles((theme) => ({
   spacerTextBody: {
     fontWeight: 400,
     fontSize: 'min(4vw, 20px)',
-    textAlign: 'center',
+    textAlign: 'left',
     color: 'white',
     width: '95%',
     padding: 10,
@@ -204,17 +205,21 @@ const useStyles = makeStyles((theme) => ({
     padding: 5
   },
   infoBody: {
-    fontWeight: 300,
+    fontWeight: 400,
     fontSize: 'min(4vw, 20px)',
-    textAlign: 'center',
+    textAlign: 'left',
     color: 'black',
-    padding: 25 
+    width: '95%',
+    padding: 10,
+    maxWidth: 800,
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   carousel: {
     backgroundColor: "rgba(255, 255, 255, 0.8)"
   },
   navbarSpace: {
-    height: 100
+    height: 85
   }
 }));
 

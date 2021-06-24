@@ -22,15 +22,16 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: {
     color: "black",
-    fontSize: 'min(4vw, 25px)',
+    fontSize: 'min(5vw, 25px)',
     fontWeight: 500,
-    marginLeft: '2%',
+    marginLeft: '1%',
     display: 'inline',
     verticalAlign: 'middle'
   },
   navbarCentered: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    height: 58
   },
   navbarLinks: {
     textDecoration: "none",
@@ -85,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   menuLinkSpacer: {
-    marginRight: "8vw",
+    marginRight: 20,
     marginTop: "22px",
     '&::after': {
       width: '100%',
@@ -104,9 +105,9 @@ const useStyles = makeStyles((theme) => ({
   },
   navbarContact: {
     fontWeight: 400,
-    fontSize: 'min(2.3vw, 12px)',
+    fontSize: 'min(2.4vw, 12px)',
     color: 'white',
-    marginRight: '5%',
+    marginRight: 'min(2%, 20px)',
     display: 'inline',
     height: '100%',
     verticalAlign: 'middle'
@@ -125,10 +126,10 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     fontSize: 'min(3vw, 18px)',
     fontWeight: 300,
-    marginLeft: 20,
+    marginLeft: 'min(2%, 15px)',
     display: 'inline',
     verticalAlign: 'middle',
-    marginTop: 'min(1%, 4px)'
+    marginTop: '5px'
   }
 }));
 
@@ -164,18 +165,20 @@ function Navbar() {
             <a className={classes.navbarContactLinks} href = "mailto: godsstorehousebks@gmail.com">godsstorehousebks@gmail.com</a>
           </Typography>
         </Grid>
-            <Grid item className={classes.navbarCentered} xs={11} sm={11} md={11} lg={11} xl={11} align="left">
+            <Grid item className={classes.navbarCentered} xs={10} sm={10} md={10} lg={10} xl={10} align="left">
               <a href='/' className={classes.homeLink}>
                 <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
               </a>
               <Typography className={classes.navbar} variant="h5" component="h2">
                 <a href='/' className={classes.homeLink}> God&#39;s Storehouse </a>
               </Typography>
-              <Typography className={classes.navbarSubheader} variant="h5" component="h2">
-                a ministry of CCEMA
-              </Typography>
+              <Hidden xsDown>
+                <Typography className={classes.navbarSubheader} variant="h5" component="h2">
+                  a ministry of CCEMA
+                </Typography>
+              </Hidden>
             </Grid>
-            <Grid item className={classes.navbarContainer} xs={1} sm={1} md={1} lg={1} xl={1} align="center">
+            <Grid item className={classes.navbarContainer} xs={2} sm={2} md={2} lg={2} xl={2} align="right">
               <div className={classes.iconsContainer}>
                   <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#000000" label="Show menu" marginTop="20px" direction="right" />
               </div>

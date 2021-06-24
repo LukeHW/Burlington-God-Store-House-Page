@@ -94,7 +94,7 @@ function Resources() {
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
-                  Harvester&#39;s Acceptance Form
+                  Harvester&#39;s Proxy Acceptance Form
                 </Typography>
                 <img className={classes.resources} alt="" border="0" src="/Harvester's Info 2.jpg" />
               </Grid>
