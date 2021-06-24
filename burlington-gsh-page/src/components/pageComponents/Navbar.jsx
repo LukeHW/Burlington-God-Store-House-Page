@@ -22,9 +22,11 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: {
     color: "black",
-    fontSize: 'min(5vw, 25px)',
+    fontSize: 'min(4vw, 25px)',
     fontWeight: 500,
-    marginLeft: '2%'
+    marginLeft: '2%',
+    display: 'inline',
+    verticalAlign: 'middle'
   },
   navbarCentered: {
     display: 'flex',
@@ -40,16 +42,8 @@ const useStyles = makeStyles((theme) => ({
       filter: 'contrast(50%)'
     },
   },
-  icons: {
-    width: 25,
-    height: 25,
-    marginRight: 15,
-    marginLeft: 15,
-    padding: 15
-  },
   iconsContainer: {
-    marginTop: 8,
-    marginRight: '7%'
+    marginTop: 7
   },
   navbarLogo: {
     marginLeft: '2%',
@@ -126,6 +120,15 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     color: 'white',
     padding: 2
+  },
+  navbarSubheader: {
+    color: "black",
+    fontSize: 'min(3vw, 18px)',
+    fontWeight: 300,
+    marginLeft: 20,
+    display: 'inline',
+    verticalAlign: 'middle',
+    marginTop: 'min(1%, 4px)'
   }
 }));
 
@@ -161,20 +164,20 @@ function Navbar() {
             <a className={classes.navbarContactLinks} href = "mailto: godsstorehousebks@gmail.com">godsstorehousebks@gmail.com</a>
           </Typography>
         </Grid>
-            <Grid item className={classes.navbarCentered} xs={8} sm={8} md={5} lg={4} xl={4} align="left">
+            <Grid item className={classes.navbarCentered} xs={11} sm={11} md={11} lg={11} xl={11} align="left">
               <a href='/' className={classes.homeLink}>
                 <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
               </a>
               <Typography className={classes.navbar} variant="h5" component="h2">
                 <a href='/' className={classes.homeLink}> God&#39;s Storehouse </a>
               </Typography>
+              <Typography className={classes.navbarSubheader} variant="h5" component="h2">
+                a ministry of CCEMA
+              </Typography>
             </Grid>
-            <Grid item xs="auto" sm="auto" md={2} lg={4} xl={4} align="left" />
-            <Grid item className={classes.navbarContainer} xs={4} sm={4} md={5} lg={4} xl={4} align="right">
+            <Grid item className={classes.navbarContainer} xs={1} sm={1} md={1} lg={1} xl={1} align="center">
               <div className={classes.iconsContainer}>
-                <div className={classes.hamburgerContainer}>
                   <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#000000" label="Show menu" marginTop="20px" direction="right" />
-                </div>
               </div>
             </Grid> 
 

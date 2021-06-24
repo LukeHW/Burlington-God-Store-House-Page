@@ -14,7 +14,7 @@ function DemoCarousel() {
   const classes = useStyles();
 
   return (
-    <Carousel>
+    <Carousel interval={5000} transitionTime={1000} selectedItem={0} infiniteLoop='true' useKeyboardArrows='true' stopOnHover='true' dynamicHeight='false' emulateTouch='true' autoPlay='true'>
         <div>
             <img src="assets/1.jpg" alt='' />
         </div>
