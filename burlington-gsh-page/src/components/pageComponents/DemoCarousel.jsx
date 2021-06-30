@@ -7,8 +7,8 @@ import { Carousel } from 'react-responsive-carousel';
 // styles for Footer.js
 const useStyles = makeStyles((theme) => ({
   imageLink: {
-    height: 'inherit',
-    width: 'inherit'
+    display: 'inline-block',
+    textDecoration: 'none'
   }
 }));
 
@@ -17,7 +17,7 @@ function DemoCarousel() {
   const classes = useStyles();
 
   return (
-    <Carousel interval={5000} transitionTime={500} selectedItem={0} infiniteLoop='true' useKeyboardArrows='true' stopOnHover='true' dynamicHeight='false' emulateTouch='true' autoPlay='true'>
+    <Carousel showThumbs={false} interval={5000} transitionTime={500} selectedItem={0} infiniteLoop='true' useKeyboardArrows='true' stopOnHover='true' dynamicHeight='false' autoPlay='true'>
         <div>
             <img src="assets/1.jpg" alt='' />
         </div>

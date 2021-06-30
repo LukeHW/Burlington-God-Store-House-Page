@@ -216,7 +216,10 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 'auto'
   },
   carousel: {
-    backgroundColor: "rgba(255, 255, 255, 0.8)"
+    backgroundColor: "rgba(55, 55, 55, 0.7)",
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
   },
   navbarSpace: {
     height: 85
