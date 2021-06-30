@@ -188,11 +188,11 @@ const useStyles = makeStyles((theme) => ({
   infoContainer: {
     backgroundColor: '#f8f8f8',
     width: '100%',
-    height: '100%'
+    height: '100%',
+    color: 'rgb(49, 51, 64)'
   },
   infoSpace: {
     fontSize: 'min(8vw, 32px)',
-    color: 'black',
     fontWeight: 400,
     padding: 15,
     marginTop: 20
@@ -200,7 +200,6 @@ const useStyles = makeStyles((theme) => ({
   infoTitle: {
     fontWeight: 400,
     fontSize: 'min(8vw, 32px)',
-    color: "black",
     textAlign: 'center',
     padding: 5
   },
@@ -208,7 +207,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     fontSize: 'min(4vw, 20px)',
     textAlign: 'left',
-    color: 'black',
     width: '95%',
     padding: 10,
     maxWidth: 800,
@@ -262,6 +260,11 @@ function Main() {
       </Grid>
 
       <Grid container className={classes.infoContainer}>
+      <Grid item className={classes.infoSpace} xs={12} sm={12} md={12} lg={12} xl={12}>
+        <Typography className={classes.infoTitle} variant="h1" component="h2" gutterBottom align='center'>
+          <strong>Some of what we offer to our community:</strong>
+        </Typography>
+      </Grid>
         <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
           <Grid item className={classes.infoSpace} xs={12} sm={12} md={12} lg={3} xl={3}>
               <img className={classes.icons} src="/clothesIcon.png" alt="Clothes" />

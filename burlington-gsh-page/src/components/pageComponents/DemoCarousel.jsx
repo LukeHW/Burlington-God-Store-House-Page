@@ -22,12 +22,19 @@ function DemoCarousel() {
             <img src="assets/1.jpg" alt='' />
         </div>
         <div>
-            <a className={classes.imageLink} target="blank" href="https://www.paypal.com/donate/?token=V9OwFrDwpLWLWYktYeXcDFUn57gOkRpLmon4hYRx3JSMNSo6ak5tvhvsmiVEs9FmI0ulBDxN1TYQib6I">
-              <img src="assets/2.jpg" alt='' />
+            <a className={classes.imageLink} target="blank" href="https://www.paypal.com/donate?hosted_button_id=WDDPCHKP4W4BG&source=url">
+              <img src="assets/2.jpg" alt='Paypal Donation Link' />
             </a>
         </div>
         <div>
-            <img src="assets/3.jpg" alt='' />
+            <a href='/Resources' rel="noreferrer" className={classes.imageLink}>
+              <img src="assets/3.jpg" alt='Resources Link' />
+            </a>
+        </div>
+        <div>
+            <a target="blank" href='https://www.facebook.com/Gods-Storehouse-101240358583466' rel="noreferrer" className={classes.imageLink}>
+              <img src="assets/4.jpg" alt='Facebook Page Link' />
+            </a>
         </div>
     </Carousel>
   );
