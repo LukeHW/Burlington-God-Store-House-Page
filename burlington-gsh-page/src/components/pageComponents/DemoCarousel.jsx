@@ -17,9 +17,9 @@ function DemoCarousel() {
   const classes = useStyles();
 
   return (
-    <Carousel showThumbs={false} interval={5000} transitionTime={500} selectedItem={0} infiniteLoop='true' useKeyboardArrows='true' stopOnHover='true' dynamicHeight='false' autoPlay='true'>
+    <Carousel showThumbs={false} interval={9000} transitionTime={500} infiniteLoop='true' useKeyboardArrows='true' stopOnHover='true' dynamicHeight='false' autoPlay='true'>
         <div>
-            <img src="assets/1.jpg" alt='' />
+            <img src="assets/1.jpg" alt='Store Hours' />
         </div>
         <div>
             <a className={classes.imageLink} target="blank" href="https://www.paypal.com/donate?hosted_button_id=WDDPCHKP4W4BG&source=url">
@@ -33,7 +33,7 @@ function DemoCarousel() {
         </div>
         <div>
             <a target="blank" href='https://www.facebook.com/Gods-Storehouse-101240358583466' rel="noreferrer" className={classes.imageLink}>
-              <img src="assets/4.jpg" alt='Facebook Page Link' />
+              <img src="assets/4.jpg" alt='Gods Storehouse Facebook Page Link' />
             </a>
         </div>
     </Carousel>
