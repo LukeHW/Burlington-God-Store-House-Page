@@ -19,7 +19,7 @@ function DemoCarousel() {
   return (
     <Carousel showThumbs={false} interval={9000} transitionTime={500} infiniteLoop='true' useKeyboardArrows='true' stopOnHover='true' dynamicHeight='false' autoPlay='true'>
         <div>
-            <img src="assets/1.jpg" alt='Store Hours' />
+            <img src="assets/1.jpg" alt='Storehouse Hours' />
         </div>
         <div>
             <a className={classes.imageLink} target="blank" href="https://www.paypal.com/donate?hosted_button_id=WDDPCHKP4W4BG&source=url">

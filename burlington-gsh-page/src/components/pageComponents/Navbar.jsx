@@ -11,7 +11,7 @@ import { Spin as Hamburger } from 'hamburger-react';
 
 // styles for Footer.js
 const useStyles = makeStyles((theme) => ({
-  navbarActive: {
+  navbarWrapper: {
     backgroundColor: "rgba(255, 255, 255, 0.95)",
     height: 85,
     width: "100%",
@@ -156,7 +156,7 @@ function Navbar() {
   // </Typography>
 
   return (
-    <div className={classes.navbarActive}>
+    <div className={classes.navbarWrapper}>
         <Grid className={classes.navbarContainer} container>
         <Grid item className={classes.navbarContactBar} xs={12} sm={12} md={12} lg={12} xl={12} align="right"> 
           <Typography className={classes.navbarContact} variant="h5" component="h2">

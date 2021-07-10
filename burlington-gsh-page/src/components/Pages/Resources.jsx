@@ -1,8 +1,18 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/no-this-in-sfc */
+/* eslint-disable no-return-assign */
 // import modules
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import { useReactToPrint } from 'react-to-print';
+
+import PrintMRB from '../prints/PrintMRB';
+import PrintCCT from '../prints/PrintCCT';
+import PrintLCV from '../prints/PrintLCV';
+import PrintHPAF from '../prints/PrintHPAF';
+import PrintCCRC from '../prints/PrintCCRC';
 
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
@@ -47,8 +57,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '400px',
     minWidth: '150px',
     width: '90%',
-    padding: 15,
-    marginBottom: 40
+    padding: 15
   },
   resourcesContainer: {
 
@@ -64,9 +73,8 @@ function Resources() {
 
   const classes = useStyles();
 
-  const handlePrintPreview = (imageURL) => {
-    window.print(imageURL)
-  }
+  // keep image in DOM, but hidden
+  // <div style={{ display: "none" }}><ComponentToPrint ref={componentRef} /></div>
 
   return (
     <div className="App">
@@ -82,31 +90,46 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Mobile Resource Bus
                 </Typography>
-                <img className={classes.resources} alt="" border="0" src="/MRB Info.jpg" />
+                <a href='/MRB Info.jpg' target='_blank'>
+                  <img className={classes.resources} alt="Mobile Resource Bus Information" border="0" src="/MRB Info.jpg" />
+                </a>
+                <PrintMRB />
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Coffey County Transportation
                 </Typography>
+                <a href='/CCT Info.jpg' target='_blank'>
                   <img className={classes.resources} alt="" border="0" src="/CCT Info.jpg" />
+                </a>
+                <PrintCCT />
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   LifeCare Van
                 </Typography>
-                <img className={classes.resources} alt="" border="0" src="/LCV Info.jpg" />
+                <a href='/LCV Info.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/LCV Info.jpg" />
+                </a>
+                <PrintLCV />
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Harvester&#39;s Proxy Acceptance Form
                 </Typography>
-                <img className={classes.resources} alt="" border="0" src="/Harvester's Info 2.jpg" />
+                <a href='/Harvester&#39;s Info 2.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/Harvester's Info 2.jpg" />
+                </a>
+                <PrintHPAF />
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Coffey County Resource Council
                 </Typography>
-                <img className={classes.resources} alt="" border="0" src="/CCRC Info.jpg" />
+                <a href='/CCRC Info.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/CCRC Info.jpg" />
+                </a>
+                <PrintCCRC />
               </Grid>
       </Grid>
     </div>
