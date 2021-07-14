@@ -316,7 +316,7 @@ function Main() {
                   Facebook
                 </Typography>
                 <Typography variant="h6" component="h6" className={classes.paperBody} align='center'>
-                  God&#39;s Store House facebook page shares weekly information and updates about the store.
+                  The God&#39;s Storehouse facebook page shares weekly information and updates about the store.
                 </Typography>
               </div>
             </Paper>
