@@ -183,7 +183,7 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     textAlign: 'center',
     padding: 5,
-    marginTop: '150px'
+    marginTop: 70
   },
   infoContainer: {
     backgroundColor: '#f8f8f8',
@@ -221,6 +221,42 @@ const useStyles = makeStyles((theme) => ({
   },
   navbarSpace: {
     height: 85
+  },
+  reviews: {
+    backgroundColor: '#FFFFFF',
+    color: 'rgb(49, 51, 64)'
+  },
+  reviewsHeader: {
+    fontWeight: 400,
+    fontSize: 'min(8vw, 32px)',
+    textAlign: 'center',
+    padding: 5,
+    marginTop: 40
+  },
+  reviewsTitle: {
+    fontSize: '24px',
+    padding: 10,
+    fontWeight: 400
+  },
+  reviewsIcons: {
+    height: '80px',
+    width: '80px',
+    align: 'center',
+    marginTop: '30px'
+  },
+  reviewsBody: {
+    fontSize: '18px',
+    padding: 10,
+    fontWeight: 300,
+    textAlign: 'center',
+    maxWidth: 500,
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  reviewsRating: {
+    width: "200px", 
+    align: "center",
+    marginTop: '-15px'
   }
 }));
 
@@ -297,13 +333,50 @@ function Main() {
       </Grid>
 
       <Grid container className={classes.secondContainer}>
-        <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2} />
-          <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={8} xl={8}>
-              <Typography className={classes.facebookTitle} variant="h4" component="h2" gutterBottom align='center'>
-                Like us on Facebook!
-              </Typography>
-          </Grid>
-          <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2} />
+      <Grid item className={classes.reviews} xs={12} sm={12} md={12} lg={12} xl={12}>
+        <Typography className={classes.reviewsHeader} variant="h1" component="h2" gutterBottom align='center'>
+          <strong>What our community is saying about us:</strong>
+        </Typography>
+      </Grid>
+      <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+        <Grid item className={classes.reviews} xs={12} sm={12} md={12} lg={3} xl={3}>
+            <img className={classes.reviewsIcons} src="/reviewsIcon.png" alt="Profile Avatar" />
+            <Typography className={classes.reviewsTitle} variant="h1" component="h2" align='center'>
+              Ben Scully
+            </Typography>
+            <img className={classes.reviewsRating} src="/reviewsRating.png" alt="Star Rating" />
+            <Typography className={classes.reviewsBody} variant="h1" component="h2" gutterBottom align='center'>
+              Very nice people definitely will come back to this town people are really nice here small town with great hospitality!
+            </Typography>
+        </Grid>
+        <Grid item className={classes.reviews} xs={12} sm={12} md={12} lg={4} xl={4}>
+            <img className={classes.reviewsIcons} src="/reviewsIcon.png" alt="Profile Avatar" />
+            <Typography className={classes.reviewsTitle} variant="h1" component="h2" align='center'>
+              Sadie B.
+            </Typography>
+            <img className={classes.reviewsRating} src="/reviewsRating.png" alt="Star Rating" />
+            <Typography className={classes.reviewsBody} variant="h1" component="h2" gutterBottom align='center'>
+              Great place lucky to have it in our little town.
+            </Typography>
+        </Grid>
+        <Grid item className={classes.reviews} xs={12} sm={12} md={12} lg={3} xl={3}>
+            <img className={classes.reviewsIcons} src="/reviewsIcon.png" alt="Profile Avatar" />
+            <Typography className={classes.reviewsTitle} variant="h1" component="h2" align='center'>
+              Scarlett Cooper
+            </Typography>
+            <img className={classes.reviewsRating} src="/reviewsRating.png" alt="Star Rating" />
+            <Typography className={classes.reviewsBody} variant="h1" component="h2" gutterBottom align='center'>
+              Nice organization that helps the community!
+            </Typography>
+        </Grid>
+       
+        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+        
+        <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Typography className={classes.facebookTitle} variant="h4" component="h2" gutterBottom align='center'>
+              Like us on Facebook!
+            </Typography>
+        </Grid>
 
           <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
           <Grid item xs={12} sm={12} md={10} lg={10} xl={10} align='center'>
