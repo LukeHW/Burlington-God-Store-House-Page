@@ -14,7 +14,6 @@ import bg from '../../testBG2.jpg';
 const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between",
-    fontFamily: 'Open Sans',
     height: '100%'
   },
   paperContainer: {
@@ -76,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
   secondContainer: {
     minHeight: "70vh",
     backgroundColor: "rgba(255, 255, 255, 0.8)",
-    fontFamily: 'Open Sans',
+    fontFamily: 'Helvetica',
     padding: theme.spacing(0)
   },
   hidden: {
@@ -369,7 +368,6 @@ function Main() {
               Nice organization that helps the community!
             </Typography>
         </Grid>
-       
         <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
         
         <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>
