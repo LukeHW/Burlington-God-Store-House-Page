@@ -6,7 +6,6 @@ import React, { useState, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { useReactToPrint } from 'react-to-print';
 
 import PrintMRB from '../prints/PrintMRB';
 import PrintCCT from '../prints/PrintCCT';
