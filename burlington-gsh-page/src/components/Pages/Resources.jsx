@@ -14,7 +14,7 @@ import PrintLCV from '../prints/PrintLCV';
 import PrintHPAF from '../prints/PrintHPAF';
 import PrintCCRC from '../prints/PrintCCRC';
 
-// styles for Main.js
+// styles for Resources
 const useStyles = makeStyles((theme) => ({
   container: {
     minHeight: "100vh",

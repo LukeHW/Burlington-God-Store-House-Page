@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-// styles for Footer.js
+// styles for DemoCarousel
 const useStyles = makeStyles((theme) => ({
   imageLink: {
     display: 'inline-block',

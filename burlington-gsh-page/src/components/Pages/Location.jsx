@@ -10,7 +10,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Map from '../pageComponents/Map';
 
 
-// styles for Main.js
+// styles for Location
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: ('#eeeeee'),

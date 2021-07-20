@@ -9,7 +9,7 @@ import Avatar from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
 import { Spin as Hamburger } from 'hamburger-react';
 
-// styles for Footer.js
+// styles for Navbar
 const useStyles = makeStyles((theme) => ({
   navbarWrapper: {
     backgroundColor: "rgba(255, 255, 255, 0.95)",
@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   menuContainerShown: {
     width: "100%",
     minWidth: '200px',
-    height: 260,
+    height: 320,
     backgroundColor: "rgba(20, 20, 20, 0.75)",
     backdropFilter: "blur(15px)",
     position: "fixed",
@@ -187,7 +187,10 @@ function Navbar() {
             <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
                 <Grid item className={classes.menuBox} xs={12} sm={12} md={12} lg={12} xl={12} align="right">
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/" className={classes.menuLink} onClick={closeMenuHandler}>About</Link>
+                        <Link to="/" className={classes.menuLink} onClick={closeMenuHandler}>Home Page</Link>
+                    </Typography>
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                        <Link to="/Harvesters" className={classes.menuLink} onClick={closeMenuHandler}>Harvesters</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/Location" className={classes.menuLink} onClick={closeMenuHandler}>Location</Link>

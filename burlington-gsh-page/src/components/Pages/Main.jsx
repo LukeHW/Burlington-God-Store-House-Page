@@ -10,7 +10,7 @@ import DemoCarousel from '../pageComponents/DemoCarousel';
 // import components
 import bg from '../../testBG2.jpg';
 
-// styles for Main.js
+// styles for Main
 const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between",
