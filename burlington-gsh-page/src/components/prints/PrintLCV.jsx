@@ -5,6 +5,7 @@
 import React, { useState, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useReactToPrint } from 'react-to-print';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -27,7 +28,9 @@ function PrintLCV() {
   return (
       <div>
         <div style={{ overflow: "hidden", height: "0" }}><img alt='' ref={componentRef} src="/LCV Info.jpg" width="100%" height="1000" /></div>
-        <button type="button" onClick={handlePrint} className={classes.button}>Print</button>
+        <Hidden xsDown>
+          <button type="button" onClick={handlePrint} className={classes.button}>Print</button>
+        </Hidden>
       </div>
   );
 }

@@ -11,6 +11,7 @@ import Main from './components/Pages/Main';
 import ThankYou from './components/Pages/ThankYou';
 import Location from './components/Pages/Location';
 import Harvesters from './components/Pages/Harvesters';
+import Donate from './components/Pages/Donate';
 import Page from './components/pageComponents/Page';
 import Footer from './components/pageComponents/Footer';
 import Navbar from './components/pageComponents/Navbar';
@@ -51,6 +52,11 @@ function App() {
         <Route exact path="/Harvesters">
           <Page>
             <Harvesters />
+          </Page>
+        </Route>
+        <Route exact path="/Donate">
+          <Page>
+            <Donate />
           </Page>
         </Route>
       </Switch>

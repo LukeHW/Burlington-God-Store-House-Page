@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   menuContainerShown: {
     width: "100%",
     minWidth: '200px',
-    height: 320,
+    height: 360,
     backgroundColor: "rgba(20, 20, 20, 0.75)",
     backdropFilter: "blur(15px)",
     position: "fixed",
@@ -188,6 +188,9 @@ function Navbar() {
                 <Grid item className={classes.menuBox} xs={12} sm={12} md={12} lg={12} xl={12} align="right">
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/" className={classes.menuLink} onClick={closeMenuHandler}>Home Page</Link>
+                    </Typography>
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                        <Link to="/Donate" className={classes.menuLink} onClick={closeMenuHandler}>Donations</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/Harvesters" className={classes.menuLink} onClick={closeMenuHandler}>Harvesters</Link>
