@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
           marginTop: 50
       },
       contentBodyList: {
-        textAlign: 'left',
+        textAlign: 'left',  
         marginLeft: 'auto',
         marginRight: 'auto',
         color: 'black',
@@ -71,40 +71,18 @@ function Harvesters() {
             <div className={classes.headerBackground}>
                 <div className={classes.headerContainer}>
                     <Typography className={classes.header} variant="h2" component="h1">
-                        Harvester&#39;s
+                        Harvesters
                     </Typography>
                 </div>
             </div>
 
             <div className={classes.contentContainer}>
                 <Typography className={classes.contentBody} variant="h4" component="h4">
-                    At <strong>God&#39;s Storehouse</strong> we strive to give our communtiy items that are necessary and helpful. We are always thankful for your donations!
+                    At <strong>God&#39;s Storehouse</strong> we strive to give our communtiy items that are necessary and helpful. Harvesters is a way to give out large portions of food to the community in a short amount of time.
                 </Typography>
                 <Typography className={classes.contentBody} variant="h4" component="h4">
-                    Some of these items include:
+                    Typical food items include:
                 </Typography>
-                <ul className={classes.contentBodyList}>
-                    <li>Food</li>
-                    <li>Clothing</li>
-                    <li>Shoes</li>
-                    <li>Blankets</li>
-                    <li>Sheet Sets</li>
-                    <li>Bath Towels</li>
-                    <li>Washcloths</li>
-                    <li>Shampoo</li>
-                    <li>Deodorant</li>
-                    <li>Dish Soap</li>
-                    <li>Toilet Paper</li>
-                    <li>Paper Towels</li>
-                    <li>Diapers</li>
-                    <li>Feminine Products</li>
-                    <li>Shaving Cream</li>
-                    <li>Toothpaste</li>
-                    <li>Hand Lotion</li>
-                    <li>Bar Soap</li>
-                    <li>Body Wash</li>
-                    <li>Kitchenware</li>
-                </ul>
             </div>
         </Grid>
     </div>

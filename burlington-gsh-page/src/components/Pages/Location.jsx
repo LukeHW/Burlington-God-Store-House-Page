@@ -9,6 +9,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 import Map from '../pageComponents/Map';
 
+import bg from '../../Location_BG.jpg';
 
 // styles for Location
 const useStyles = makeStyles((theme) => ({
@@ -84,7 +85,36 @@ const useStyles = makeStyles((theme) => ({
      textDecoration: 'none',
      color: 'rgb(49, 51, 64)',
      fontWeight: 600
-   }
+   },
+  header: {
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: 500,
+    fontSize: 50
+  },
+  headerBackground: {
+    width: '100%',
+    height: 'min(50vw, 600px)',
+    minHeight: '300px',
+    marginTop: 85,
+    backgroundImage: `url(${bg})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: 'center center',
+    backgroundSize: "cover"
+  },
+  headerContainer: {
+    height: 'inherit',
+    minHeight: '300px',
+    width: 'inherit',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none',
+    msUserSelect: 'none',
+    userSelect: 'none'
+  },
+
 }));
 
 function Location() {
@@ -96,14 +126,11 @@ function Location() {
   return (
     <div className="App">
       <Grid container className={classes.container}>
-        <Grid className={classes.titleContainer} item xs={12} sm={12} md={12} lg={12} xl={12} >
-            <Typography className={classes.bodyHeader} variant="h1" component="h2" align='left'>
-                God&#39;s Storehouse
-            </Typography>
-            <Typography className={classes.bodySubHeader} variant="h1" component="h2" align='left'>
-                Located in Burlington, Kansas
-            </Typography>
-        </Grid>
+          <div className={classes.headerBackground}>
+              <div className={classes.headerContainer}>
+                &nbsp;
+              </div>
+          </div>
 
         <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={5} xl={5}>
           <div className={classes.addressWrapperSecondary}>
@@ -146,8 +173,6 @@ function Location() {
         <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={7} xl={7}>
           <Map />
         </Grid>
-
-        <Grid item className={classes.titleContainer} xs={12} sm={12} md={12} lg={12} xl={12} />
       </Grid>
     </div>
   );

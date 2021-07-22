@@ -193,7 +193,7 @@ function Navbar() {
                         <Link to="/Donate" className={classes.menuLink} onClick={closeMenuHandler}>Donations</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/Harvesters" className={classes.menuLink} onClick={closeMenuHandler}>Harvester&#39;s</Link>
+                        <Link to="/Harvesters" className={classes.menuLink} onClick={closeMenuHandler}>Harvesters</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/Location" className={classes.menuLink} onClick={closeMenuHandler}>Location</Link>

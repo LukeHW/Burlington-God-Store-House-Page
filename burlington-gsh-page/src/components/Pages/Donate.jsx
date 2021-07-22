@@ -38,8 +38,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center'
   },
   contentContainer: {
-    backgroundColor: '#FFFFFF',
-    height: 1300,
     width: '100%'
   },
   contentBody: {
@@ -48,21 +46,33 @@ const useStyles = makeStyles((theme) => ({
       marginRight: 'auto',
       color: 'black',
       fontWeight: 300,
-      fontSize: 28,
+      fontSize: 'min(4vw, 28px)',
       maxWidth: 900,
       padding: 20,
       marginTop: 50
   },
   contentBodyList: {
-    textAlign: 'left',
+    listStylePosition: 'inside',
     marginLeft: 'auto',
     marginRight: 'auto',
     color: 'black',
     fontWeight: 300,
-    fontSize: 24,
-    maxWidth: 185,
+    fontSize: '24px',
+    paddingLeft: 0,
+    lineHeight: 1.5,
+    width: 220
+  },
+  contentPaypal: {
+    textAlign: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    color: 'black',
+    fontWeight: 300,
+    fontSize: 'min(4vw, 28px)',
+    maxWidth: 900,
     padding: 20,
-    lineHeight: 1.5
+    marginTop: 50,
+    marginBottom: 50
   }
 }));
 
@@ -83,33 +93,76 @@ function Donate() {
 
             <div className={classes.contentContainer}>
                 <Typography className={classes.contentBody} variant="h4" component="h4">
-                    At <strong>God&#39;s Storehouse</strong> we strive to give our communtiy items that are necessary and helpful. We are always thankful for your donations!
+                    <strong>God&#39;s Storehouse</strong> has been serving Coffey County for over 20 years by providing vital essentials like food and clothing to those who are homeless and those who find themselves in need for various reasons.  We rely on donations from Food Drives held throughout the year by local organizations and churches and from individual donations from people like you.  Whether your donation is food, clothing or monetary; we thank you!  Every gift is appreciated.
                 </Typography>
                 <Typography className={classes.contentBody} variant="h4" component="h4">
                     Some of these items include:
                 </Typography>
+            </div>
+
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
                 <ul className={classes.contentBodyList}>
                     <li>Food</li>
                     <li>Clothing</li>
                     <li>Shoes</li>
                     <li>Blankets</li>
+                    <li>Diapers</li>
+                    <li>Feminine Products</li>
+                </ul>
+            </Grid>
+            <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={4} xl={4}>
+                <ul className={classes.contentBodyList}>
                     <li>Sheet Sets</li>
                     <li>Bath Towels</li>
                     <li>Washcloths</li>
                     <li>Shampoo</li>
+                    <li>Hand Lotion</li>
+                    <li>Bar Soap</li>
+                    <li>Body Wash</li>
+                </ul>
+            </Grid>
+            <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={3} xl={3}>
+                <ul className={classes.contentBodyList}>
                     <li>Deodorant</li>
                     <li>Dish Soap</li>
                     <li>Toilet Paper</li>
                     <li>Paper Towels</li>
-                    <li>Diapers</li>
-                    <li>Feminine Products</li>
                     <li>Shaving Cream</li>
                     <li>Toothpaste</li>
-                    <li>Hand Lotion</li>
-                    <li>Bar Soap</li>
-                    <li>Body Wash</li>
                     <li>Kitchenware</li>
                 </ul>
+            </Grid>
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+
+            <div className={classes.contentContainer}>
+                <Typography className={classes.contentBody} variant="h4" component="h4">
+                    There are some items that we <strong>DO NOT</strong> accept. Some of these would include:
+                </Typography>
+            </div>
+
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
+                <ul className={classes.contentBodyList}>
+                    <li>Outdated Food</li>
+                </ul>
+            </Grid>
+            <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={4} xl={4}>
+                <ul className={classes.contentBodyList}>
+                    <li>Toys</li>
+                </ul>
+            </Grid>
+            <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={3} xl={3}>
+                <ul className={classes.contentBodyList}>
+                    <li>Books</li>
+                </ul>
+            </Grid>
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+
+            <div className={classes.contentContainer}>
+                <Typography className={classes.contentPaypal} variant="h4" component="h4">
+                    Monetary donations can be made online, <a target="blank" href="https://www.paypal.com/donate?hosted_button_id=WDDPCHKP4W4BG&source=url">via PayPal</a>, or brought in directly to the storehouse. Thank you for your contribution!
+                </Typography>
             </div>
         </Grid>
     </div>
