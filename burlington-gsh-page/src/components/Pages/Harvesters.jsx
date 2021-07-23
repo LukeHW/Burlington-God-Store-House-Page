@@ -34,19 +34,18 @@ const useStyles = makeStyles((theme) => ({
       },
       contentContainer: {
         backgroundColor: '#FFFFFF',
-        height: 1300,
         width: '100%'
       },
       contentBody: {
-          textAlign: 'center',
+          textAlign: 'left',
           marginLeft: 'auto',
           marginRight: 'auto',
           color: 'black',
           fontWeight: 300,
-          fontSize: 28,
+          fontSize: 'min(4vw, 28px)',
           maxWidth: 900,
           padding: 20,
-          marginTop: 50
+          marginTop: 30
       },
       contentBodyList: {
         textAlign: 'left',  
@@ -58,7 +57,19 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 185,
         padding: 20,
         lineHeight: 1.5
-      }
+      },
+      contentBodyCloser: {
+        textAlign: 'left',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'black',
+        fontWeight: 300,
+        fontSize: 'min(4vw, 28px)',
+        maxWidth: 900,
+        padding: 20,
+        marginTop: 30,
+        marginBottom: 30
+      },
 }));
 
 function Harvesters() {
@@ -81,7 +92,19 @@ function Harvesters() {
                     At <strong>God&#39;s Storehouse</strong> we strive to give our communtiy items that are necessary and helpful. Harvesters is a way to give out large portions of food to the community in a short amount of time.
                 </Typography>
                 <Typography className={classes.contentBody} variant="h4" component="h4">
-                    Typical food items include:
+                  Harvesters&#39; mission is to feed hungry people today and work to end hunger tomorrow.
+
+                  We are a regional food bank serving a 26-county area of northwestern Missouri and northeastern Kansas. Harvesters provides food and related household products to more than 760 nonprofit agencies including emergency food pantries, community kitchens, homeless shelters, children&#39;s homes and others. We also offer education programs to increase community awareness of hunger and teach about good nutrition. 
+
+                  Harvesters&#39; main facility is located in Kansas City, Missouri at 3801 Topping Ave. Harvesters also operates a second facility in Topeka, Kansas at 215 E. Quincy St.
+                </Typography>
+                <Typography className={classes.contentBody} variant="h4" component="h4">
+                  Harvesters is a certified member of Feeding America, a nationwide network of more than 200 food banks.  In 2011, Harvesters was Feeding America&#39;s Food Bank of the Year. We are a registered 501(c)3 nonprofit organization.
+
+                  Harvesters also is a regional disaster-relief staging site for Feeding America. We are prepared to distribute food, water and cleaning supplies to disaster sites on short notice. 
+                </Typography>
+                <Typography className={classes.contentBodyCloser} variant="h4" component="h4">
+                  Harvesters comes to Burlington on the 1st Tuesday (6pm-8pm) and 1st Wednesday (12noon-2pm) of the month and is held at God&#39;s Storehouse, 515 Neosho Street.
                 </Typography>
             </div>
         </Grid>

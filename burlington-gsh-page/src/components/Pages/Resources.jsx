@@ -105,21 +105,21 @@ function Resources() {
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
-                  LifeCare Van
-                </Typography>
-                <a href='/LCV Info.jpg' target='_blank'>
-                  <img className={classes.resources} alt="" border="0" src="/LCV Info.jpg" />
-                </a>
-                <PrintLCV />
-              </Grid>
-              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
-                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Harvester&#39;s Proxy Acceptance Form
                 </Typography>
                 <a href='/Harvester&#39;s Info 2.jpg' target='_blank'>
                   <img className={classes.resources} alt="" border="0" src="/Harvester's Info 2.jpg" />
                 </a>
                 <PrintHPAF />
+              </Grid>
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  LifeCare Van
+                </Typography>
+                <a href='/LCV Info.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/LCV Info.jpg" />
+                </a>
+                <PrintLCV />
               </Grid>
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>

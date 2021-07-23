@@ -51,6 +51,17 @@ const useStyles = makeStyles((theme) => ({
       padding: 20,
       marginTop: 50
   },
+  contentBodyIntro: {
+    textAlign: 'left',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    color: 'black',
+    fontWeight: 300,
+    fontSize: 'min(4vw, 28px)',
+    maxWidth: 900,
+    padding: 20,
+    marginTop: 50
+  },
   contentBodyList: {
     listStylePosition: 'inside',
     marginLeft: 'auto',
@@ -60,10 +71,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '24px',
     paddingLeft: 0,
     lineHeight: 1.5,
-    width: 220
+    width: 225
   },
   contentPaypal: {
-    textAlign: 'center',
+    textAlign: 'left',
     marginLeft: 'auto',
     marginRight: 'auto',
     color: 'black',
@@ -73,7 +84,18 @@ const useStyles = makeStyles((theme) => ({
     padding: 20,
     marginTop: 50,
     marginBottom: 50
-  }
+  },
+  paypalImage: {
+    maxWidth: 400,
+    width: '50vw',
+    height: 'inherit',
+    margin: 'auto',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 50,
+    marginBottom: 45
+  },
 }));
 
 function Donate() {
@@ -92,7 +114,7 @@ function Donate() {
             </div>
 
             <div className={classes.contentContainer}>
-                <Typography className={classes.contentBody} variant="h4" component="h4">
+                <Typography className={classes.contentBodyIntro} variant="h4" component="h4">
                     <strong>God&#39;s Storehouse</strong> has been serving Coffey County for over 20 years by providing vital essentials like food and clothing to those who are homeless and those who find themselves in need for various reasons.  We rely on donations from Food Drives held throughout the year by local organizations and churches and from individual donations from people like you.  Whether your donation is food, clothing or monetary; we thank you!  Every gift is appreciated.
                 </Typography>
                 <Typography className={classes.contentBody} variant="h4" component="h4">
@@ -159,11 +181,20 @@ function Donate() {
             </Grid>
             <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
 
-            <div className={classes.contentContainer}>
-                <Typography className={classes.contentPaypal} variant="h4" component="h4">
-                    Monetary donations can be made online, <a target="blank" href="https://www.paypal.com/donate?hosted_button_id=WDDPCHKP4W4BG&source=url">via PayPal</a>, or brought in directly to the storehouse. Thank you for your contribution!
-                </Typography>
-            </div>
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item xs={12} sm={12} md={12} lg={6} xl={6} >
+                <div className={classes.contentContainer}>
+                    <Typography className={classes.contentPaypal} variant="h4" component="h4">
+                        Monetary donations can be made online, <a target="blank" href="https://www.paypal.com/donate?hosted_button_id=WDDPCHKP4W4BG&source=url">via PayPal</a>, or brought in directly to the storehouse. Thank you for your contribution!
+                    </Typography>
+                </div>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={4} xl={4} >
+                <a target="blank" href="https://www.paypal.com/donate?hosted_button_id=WDDPCHKP4W4BG&source=url">
+                    <img src='/paypal.png' alt='Donate via paypal' className={classes.paypalImage} />
+                </a>
+            </Grid>
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
         </Grid>
     </div>
   );
