@@ -49,7 +49,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 'min(4vw, 28px)',
       maxWidth: 900,
       padding: 20,
-      marginTop: 50
+      marginTop: 50,
+      marginBottom: 40
   },
   contentBodyIntro: {
     textAlign: 'left',
@@ -63,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 50
   },
   contentBodyList: {
-    listStylePosition: 'inside',
+    textAlign: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
     color: 'black',
@@ -96,6 +97,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 50,
     marginBottom: 45
   },
+  listContainer: {
+      backgroundColor: 'rgba(205, 205, 205, 0.2)'
+  }
 }));
 
 function Donate() {
@@ -122,8 +126,8 @@ function Donate() {
                 </Typography>
             </div>
 
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
-            <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
+            <Grid item className={classes.listContainer} xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={3} xl={3}>
                 <ul className={classes.contentBodyList}>
                     <li>Food</li>
                     <li>Clothing</li>
@@ -155,7 +159,7 @@ function Donate() {
                     <li>Kitchenware</li>
                 </ul>
             </Grid>
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item className={classes.listContainer} xs="auto" sm="auto" md="auto" lg={1} xl={1} />
 
             <div className={classes.contentContainer}>
                 <Typography className={classes.contentBody} variant="h4" component="h4">
@@ -163,8 +167,8 @@ function Donate() {
                 </Typography>
             </div>
 
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
-            <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
+            <Grid item className={classes.listContainer} xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={3} xl={3}>
                 <ul className={classes.contentBodyList}>
                     <li>Outdated Food</li>
                 </ul>
@@ -179,7 +183,7 @@ function Donate() {
                     <li>Books</li>
                 </ul>
             </Grid>
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item className={classes.listContainer} xs="auto" sm="auto" md="auto" lg={1} xl={1} />
 
             <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
             <Grid item xs={12} sm={12} md={12} lg={6} xl={6} >
