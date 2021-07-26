@@ -12,13 +12,14 @@ import { Spin as Hamburger } from 'hamburger-react';
 // styles for Navbar
 const useStyles = makeStyles((theme) => ({
   navbarWrapper: {
-    backgroundColor: "rgba(255, 255, 255, 0.95)",
+    backgroundColor: "rgba(255, 255, 255, 0.98)",
     height: 85,
     width: "100%",
     zIndex: 100,
     position: 'fixed',
     fontFamily: 'Open Sans',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    boxShadow: '0 0 5px 2px #888'
   },
   navbar: {
     color: "black",

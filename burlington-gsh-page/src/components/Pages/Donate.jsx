@@ -135,6 +135,7 @@ function Donate() {
                     <li>Blankets</li>
                     <li>Diapers</li>
                     <li>Feminine Products</li>
+                    <li>Body Wash</li>
                 </ul>
             </Grid>
             <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -145,7 +146,6 @@ function Donate() {
                     <li>Shampoo</li>
                     <li>Hand Lotion</li>
                     <li>Bar Soap</li>
-                    <li>Body Wash</li>
                 </ul>
             </Grid>
             <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={3} xl={3}>
@@ -171,16 +171,23 @@ function Donate() {
             <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={3} xl={3}>
                 <ul className={classes.contentBodyList}>
                     <li>Outdated Food</li>
+                    <li>Used Socks</li>
+                    <li>Used Underwear</li>
                 </ul>
             </Grid>
             <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={4} xl={4}>
                 <ul className={classes.contentBodyList}>
                     <li>Toys</li>
+                    <li>Pillows</li>
+                    <li>Knick Knacks</li>
+                    <li>Household Items</li>
                 </ul>
             </Grid>
             <Grid item className={classes.listContainer} xs={12} sm={12} md={4} lg={3} xl={3}>
                 <ul className={classes.contentBodyList}>
                     <li>Books</li>
+                    <li>Small Appliances</li>
+                    <li>Picture Frames</li>
                 </ul>
             </Grid>
             <Grid item className={classes.listContainer} xs="auto" sm="auto" md="auto" lg={1} xl={1} />

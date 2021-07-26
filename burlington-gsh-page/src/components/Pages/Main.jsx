@@ -17,13 +17,10 @@ const useStyles = makeStyles((theme) => ({
     height: '100%'
   },
   paperContainer: {
-    backgroundImage: `url(${bg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed",
+    
   },
   paperContainerOverlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.5)"
+    backgroundColor: "rgba(0, 0, 0, 0.8)"
   },
   title: {
     fontWeight: 400,
@@ -205,7 +202,7 @@ const useStyles = makeStyles((theme) => ({
   infoBody: {
     fontWeight: 400,
     fontSize: 'min(4vw, 20px)',
-    textAlign: 'left',
+    textAlign: 'center',
     width: '95%',
     padding: 10,
     maxWidth: 800,
@@ -320,12 +317,12 @@ function Main() {
               </Typography>
           </Grid>
           <Grid item className={classes.infoSpace} xs={12} sm={12} md={12} lg={3} xl={3}>
-              <img className={classes.icons} src="/infoIcon.png" alt="Information" />
+              <img src="/Harvesters-BW-Logo.png" alt="Harvesters" width={145}/>
               <Typography className={classes.infoTitle} variant="h1" component="h2" gutterBottom align='center'>
-                Information
+                Harvesters
               </Typography>
               <Typography className={classes.infoBody} variant="h1" component="h2" gutterBottom align='center'>
-                There are many agencies in the area who can offer other <a href='/Resources' rel="noreferrer" className={classes.links}>assistance.</a>  
+                Coffey County hosts Harvesters once a month for families in the area. Find out more <a href='/Harvesters' rel="noreferrer" className={classes.links}>here</a>.  
               </Typography>
           </Grid>
           <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} /> 

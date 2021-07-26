@@ -89,7 +89,7 @@ function Harvesters() {
 
             <div className={classes.contentContainer}>
                 <Typography className={classes.contentBody} variant="h4" component="h4">
-                    At <strong>God&#39;s Storehouse</strong> we strive to give our communtiy items that are necessary and helpful. Harvesters is a way to give out large portions of food to the community in a short amount of time.
+                    At <strong>God&#39;s Storehouse</strong> we strive to give our community items that are necessary and helpful. Harvesters is a way to give out large portions of food to the community in a short amount of time.
                 </Typography>
                 <Typography className={classes.contentBody} variant="h4" component="h4">
                   Harvesters&#39; mission is to feed hungry people today and work to end hunger tomorrow.
@@ -107,7 +107,7 @@ function Harvesters() {
                   Harvesters comes to Burlington on the 1st Tuesday (6pm-8pm) and 1st Wednesday (12noon-2pm) of the month and is held at God&#39;s Storehouse, 515 Neosho Street.
                 </Typography>
                 <Typography className={classes.contentBodyCloser} variant="h4" component="h4">
-                  If you have someone picking up your items in your place, please fill out this <a href='/Harvester&#39;s Info 2.jpg' target='_blank'>proxy form</a> before you stop by.
+                  If you are unable to pick up your Harvesters food, please print and fill out this <a href='/Harvester&#39;s Info 2.jpg' target='_blank'>proxy form</a> and send it with someone who can pick up your food for you.
                 </Typography>
             </div>
         </Grid>
