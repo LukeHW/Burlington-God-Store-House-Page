@@ -1,5 +1,5 @@
 // import modules
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -19,10 +19,11 @@ import Resources from './components/Pages/Resources';
 import ScrollToTop from './components/pageComponents/Scroll';
 
 // styles for App.js
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles(() => ({
+  
+}));
 
 function App() {
-  const classes = useStyles();
 
   return (
     <Router>

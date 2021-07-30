@@ -2,12 +2,12 @@
 /* eslint-disable react/no-this-in-sfc */
 /* eslint-disable no-return-assign */
 // import modules
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { useReactToPrint } from 'react-to-print';
 import Hidden from '@material-ui/core/Hidden';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     button: {
         align: 'center',
         marginBottom: 40

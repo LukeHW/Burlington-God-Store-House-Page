@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = () => <div style={{ marginLeft: '-15px', marginTop: '-55px' }}><img width='30px' height='60px' src="/googleMapIcon.svg" alt="Our Location" /></div>;

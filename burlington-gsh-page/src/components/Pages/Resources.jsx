@@ -2,7 +2,7 @@
 /* eslint-disable react/no-this-in-sfc */
 /* eslint-disable no-return-assign */
 // import modules
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';

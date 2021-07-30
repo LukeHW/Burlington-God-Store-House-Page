@@ -1,18 +1,14 @@
 // import modules
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
-import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
-import Tooltip from '@material-ui/core/Tooltip';
 
 // import components
-import bg from '../../donations.jpg';
 import bg2 from '../../donations2.jpg';
 
 // styles for Donate
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   header: {
     textAlign: 'center',
     color: 'white',

@@ -4,13 +4,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import Button from '@material-ui/core/Button';
-import Avatar from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
 import { Spin as Hamburger } from 'hamburger-react';
 
 // styles for Navbar
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   navbarWrapper: {
     backgroundColor: "rgba(255, 255, 255, 0.98)",
     height: 85,
