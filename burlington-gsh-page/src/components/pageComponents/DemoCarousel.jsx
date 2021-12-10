@@ -27,9 +27,15 @@ function DemoCarousel() {
             </a>
         </div>
         <div>
+            <img src="assets/harvestersCard.jpg" alt='Harvesters Info' />
+        </div>
+        <div>
             <a href='/Resources' rel="noreferrer" className={classes.imageLink}>
               <img src="assets/3.jpg" alt='Resources Link' />
             </a>
+        </div>
+        <div>
+            <img src="assets/card.jpg" alt='Buisness Card' />
         </div>
         <div>
             <a target="blank" href='https://www.facebook.com/Gods-Storehouse-101240358583466' rel="noreferrer" className={classes.imageLink}>
