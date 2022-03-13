@@ -35,6 +35,11 @@ function DemoCarousel() {
             </a>
         </div>
         <div>
+            <a href='https://www.greenbush.org/center-of-community-supports/early-learning-services/parents-as-teachers/' target="blank" className={classes.imageLink}>
+              <img src="assets/PAT.jpg" alt='Parents as Teachers Link' />
+            </a>
+        </div>
+        <div>
             <img src="assets/card.jpg" alt='Buisness Card' />
         </div>
         <div>

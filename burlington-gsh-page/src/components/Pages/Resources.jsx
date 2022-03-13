@@ -13,6 +13,7 @@ import PrintLCV from '../prints/PrintLCV';
 import PrintHPAF from '../prints/PrintHPAF';
 import PrintCCRC from '../prints/PrintCCRC';
 import PrintDC from '../prints/PrintDC';
+import PrintPAT from '../prints/PrintPAT';
 
 // styles for Resources
 const useStyles = makeStyles((theme) => ({
@@ -139,6 +140,15 @@ function Resources() {
                   <img className={classes.resources} alt="" border="0" src="/DC Info.jpg" />
                 </a>
                 <PrintDC />
+              </Grid>
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  Parents as Teachers
+                </Typography>
+                <a href='/PAT Info.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/PAT Info.jpg" />
+                </a>
+                <PrintPAT />
               </Grid>
       </Grid>
     </div>
