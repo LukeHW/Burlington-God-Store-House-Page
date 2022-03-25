@@ -27,7 +27,7 @@ function PrintLCV() {
 
   return (
       <div>
-        <div style={{ overflow: "hidden", height: "0" }}><img alt='' ref={componentRef} src="/LCV Info.jpg" width="100%" height="1000" /></div>
+        <div style={{ overflow: "hidden", height: "0" }}><img alt='' ref={componentRef} src="/LCV2.jpg" width="100%" height="1000" /></div>
         <Hidden xsDown>
           <button type="button" onClick={handlePrint} className={classes.button}>Print</button>
         </Hidden>

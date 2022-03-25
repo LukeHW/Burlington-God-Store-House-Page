@@ -118,8 +118,8 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   LifeCare Van
                 </Typography>
-                <a href='/LCV Info.jpg' target='_blank'>
-                  <img className={classes.resources} alt="" border="0" src="/LCV Info.jpg" />
+                <a href='/LCV2.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/LCV2.jpg" />
                 </a>
                 <PrintLCV />
               </Grid>
