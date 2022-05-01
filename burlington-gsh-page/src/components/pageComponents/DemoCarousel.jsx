@@ -30,6 +30,11 @@ function DemoCarousel() {
             <img src="assets/harvestersCard.jpg" alt='Harvesters Info' />
         </div>
         <div>
+            <a target="blank" href='https://kshousingcorp.org/?fbclid=IwAR0gDHDip695MsVTHJv8cxS0VSVw38vXkBfhT0dbTgid7rdwzTM8QKWWtJs' rel="noreferrer" className={classes.imageLink}>
+              <img src="assets/KHRC.png" alt='Kansas Housing Resources Corp.' />
+            </a>
+        </div>
+        <div>
             <a href='/Resources' rel="noreferrer" className={classes.imageLink}>
               <img src="assets/3.jpg" alt='Resources Link' />
             </a>
