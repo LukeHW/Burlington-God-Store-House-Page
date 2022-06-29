@@ -120,8 +120,8 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Harvester&#39;s Proxy Acceptance Form
                 </Typography>
-                <a href='/Harvester&#39;s Info 2.jpg' target='_blank'>
-                  <img className={classes.resources} alt="" border="0" src="/Harvester's Info 2.jpg" />
+                <a href='/Harvester&#39;s Info 3.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/Harvester's Info 3.jpg" />
                 </a>
                 <PrintHPAF />
               </Grid>

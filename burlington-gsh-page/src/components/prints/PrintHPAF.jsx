@@ -27,7 +27,7 @@ function PrintHPAF() {
 
   return (
       <div>
-        <div style={{ overflow: "hidden", height: "0" }}><img style={{padding: 15}} alt='' ref={componentRef} src="/Harvester's Info 2.jpg" width="96%" height="980" /></div>
+        <div style={{ overflow: "hidden", height: "0" }}><img style={{padding: 15}} alt='' ref={componentRef} src="/Harvester's Info 3.jpg" width="96%" height="980" /></div>
         <Hidden xsDown>
           <button type="button" onClick={handlePrint} className={classes.button}>Print</button>
         </Hidden>
