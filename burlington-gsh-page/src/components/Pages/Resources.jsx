@@ -93,8 +93,8 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Mobile Resource Bus
                 </Typography>
-                <a href='/MRB Info.jpg' target='_blank'>
-                  <img className={classes.resources} alt="Mobile Resource Bus Information" border="0" src="/MRB Info.jpg" />
+                <a href='/MRB Info 2.jpg' target='_blank'>
+                  <img className={classes.resources} alt="Mobile Resource Bus Information" border="0" src="/MRB Info 2.jpg" />
                 </a>
                 <PrintMRB />
               </Grid>
