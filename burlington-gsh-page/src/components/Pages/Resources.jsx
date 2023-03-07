@@ -93,8 +93,8 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Mobile Resource Bus
                 </Typography>
-                <a href='/MRB Info 2.jpg' target='_blank'>
-                  <img className={classes.resources} alt="Mobile Resource Bus Information" border="0" src="/MRB Info 2.jpg" />
+                <a href='/RB.JPG' target='_blank'>
+                  <img className={classes.resources} alt="Mobile Resource Bus Information" border="0" src="/RB.JPG" />
                 </a>
                 <PrintMRB />
               </Grid>
@@ -125,7 +125,7 @@ function Resources() {
                 </a>
                 <PrintHPAF />
               </Grid>
-              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+              {/* <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   LifeCare Van
                 </Typography>
@@ -133,7 +133,7 @@ function Resources() {
                   <img className={classes.resources} alt="" border="0" src="/LCV2.jpg" />
                 </a>
                 <PrintLCV />
-              </Grid>
+              </Grid> */}
               <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Coffey County Resource Council
