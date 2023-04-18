@@ -9,13 +9,16 @@ import Grid from '@material-ui/core/Grid';
 
 import PrintMRB from '../prints/PrintMRB';
 import PrintCCT from '../prints/PrintCCT';
-import PrintLCV from '../prints/PrintLCV';
+// import PrintLCV from '../prints/PrintLCV';
 import PrintHPAF from '../prints/PrintHPAF';
 import PrintCCRC from '../prints/PrintCCRC';
 // import PrintDC from '../prints/PrintDC';
 import PrintPAT from '../prints/PrintPAT';
 import PrintRGCC from '../prints/PrintRGCC';
 import PrintSOL from '../prints/PrintSOL';
+import PrintLORI from '../prints/PrintLORI';
+import PrintSOS from '../prints/PrintSOS';
+import PrintECKAN from '../prints/PrintECKAN';
 
 // styles for Resources
 const useStyles = makeStyles((theme) => ({
@@ -134,15 +137,6 @@ function Resources() {
                 </a>
                 <PrintLCV />
               </Grid> */}
-              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
-                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
-                  Coffey County Resource Council
-                </Typography>
-                <a href='/CCRC Info.jpg' target='_blank'>
-                  <img className={classes.resources} alt="" border="0" src="/CCRC Info.jpg" />
-                </a>
-                <PrintCCRC />
-              </Grid>
               {/* <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Divorce Care
@@ -170,6 +164,46 @@ function Resources() {
                 </a>
                 <PrintRGCC />
               </Grid>
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  Home-Based Services
+                </Typography>
+                <a href='/eckan.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/eckan.jpg" />
+                </a>
+                <PrintECKAN />
+              </Grid>
+
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  Parents as Teachers
+                </Typography>
+                <a href='/lori.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/lori.jpg" />
+                </a>
+                <PrintLORI />
+              </Grid>
+
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  SOS of Coffey County
+                </Typography>
+                <a href='/sos.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/sos.jpg" />
+                </a>
+                <PrintSOS />
+              </Grid>
+
+              <Grid item className={classes.resourcesContainer} xs={12} sm={12} md={6} lg={6} xl={3}>
+                <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
+                  Coffey County Resource Council
+                </Typography>
+                <a href='/CCRC Info.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/CCRC Info.jpg" />
+                </a>
+                <PrintCCRC />
+              </Grid>
+
       </Grid>
     </div>
   );
