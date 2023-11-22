@@ -60,15 +60,15 @@ const useStyles = makeStyles(() => ({
     marginTop: 50
   },
   contentBodyList: {
-    textAlign: 'center',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    display: 'inline-block',
+    textAlign: 'left',
+    listStylePosition: 'inside',
+    width: '225px',
     color: 'black',
     fontWeight: 300,
     fontSize: '24px',
     paddingLeft: 0,
     lineHeight: 1.5,
-    width: 225
   },
   contentPaypal: {
     textAlign: 'left',
@@ -83,18 +83,17 @@ const useStyles = makeStyles(() => ({
     marginBottom: 50
   },
   paypalImage: {
-    maxWidth: 400,
-    width: '50vw',
-    height: 'inherit',
-    margin: 'auto',
+    width: '100%',
+    maxWidth: '400px'
+  },
+  paypalContainer: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 50,
-    marginBottom: 45
+    justifyContent: 'center'
   },
   listContainer: {
-      backgroundColor: 'rgba(205, 205, 205, 0.2)'
+      backgroundColor: 'rgba(205, 205, 205, 0.2)',
+      textAlign: 'center'
   }
 }));
 
@@ -188,20 +187,20 @@ function Donate() {
             </Grid>
             <Grid item className={classes.listContainer} xs="auto" sm="auto" md="auto" lg={1} xl={1} />
 
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
-            <Grid item xs={12} sm={12} md={12} lg={6} xl={6} >
+            <Grid item xs="auto" sm="auto" md="auto" lg={2} xl={2} />
+            <Grid item xs={12} sm={12} md={12} lg={5} xl={5} >
                 <div className={classes.contentContainer}>
                     <Typography className={classes.contentPaypal} variant="h4" component="h4">
                         Monetary donations can be made online, <a target="blank" href="https://www.paypal.com/donate?hosted_button_id=WDDPCHKP4W4BG&source=url">via PayPal</a>, or brought in directly to the storehouse. Thank you for your contribution!
                     </Typography>
                 </div>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={4} xl={4} >
+            <Grid item xs={12} sm={12} md={12} lg={3} xl={3} className={classes.paypalContainer}>
                 <a target="blank" href="https://www.paypal.com/donate?hosted_button_id=WDDPCHKP4W4BG&source=url">
                     <img src='/paypal.png' alt='Donate via paypal' className={classes.paypalImage} />
                 </a>
             </Grid>
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item xs="auto" sm="auto" md="auto" lg={2} xl={2} />
         </Grid>
     </div>
   );

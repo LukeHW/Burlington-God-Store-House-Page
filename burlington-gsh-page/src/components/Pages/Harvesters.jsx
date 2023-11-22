@@ -37,15 +37,16 @@ const useStyles = makeStyles(() => ({
         width: '100%'
       },
       contentBody: {
-          textAlign: 'left',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          color: 'black',
-          fontWeight: 300,
-          fontSize: 'min(4vw, 28px)',
-          maxWidth: 900,
-          padding: 20,
-          marginTop: 30
+        textAlign: 'left',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        color: 'black',
+        fontWeight: 300,
+        fontSize: 'min(4vw, 28px)',
+        maxWidth: 900,
+        padding: 20,
+        paddingTop: 'min(4vw, 28px)',
+        paddingBottom: 0
       },
       contentBodyList: {
         textAlign: 'left',  
@@ -67,7 +68,8 @@ const useStyles = makeStyles(() => ({
         fontSize: 'min(4vw, 28px)',
         maxWidth: 900,
         padding: 20,
-        marginTop: 30,
+        paddingTop: 'min(4vw, 28px)',
+        paddingBottom: 0,
         marginBottom: 70
       },
 }));

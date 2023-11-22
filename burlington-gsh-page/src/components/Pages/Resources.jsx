@@ -96,8 +96,8 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Mobile Resource Bus
                 </Typography>
-                <a href='/RB.JPG' target='_blank'>
-                  <img className={classes.resources} alt="Mobile Resource Bus Information" border="0" src="/RB.JPG" />
+                <a href='/MRB Info 3.jpg' target='_blank'>
+                  <img className={classes.resources} alt="Mobile Resource Bus Information" border="0" src="/MRB Info 3.jpg" />
                 </a>
                 <PrintMRB />
               </Grid>
@@ -114,8 +114,8 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Reigning Grace Counseling Center
                 </Typography>
-                <a href='/SOL.jpg' target='_blank'>
-                  <img className={classes.resources} alt="" border="0" src="/SOL.jpg" />
+                <a href='/Laundry.jpg' target='_blank'>
+                  <img className={classes.resources} alt="" border="0" src="/Laundry.jpg" />
                 </a>
                 <PrintSOL />
               </Grid>

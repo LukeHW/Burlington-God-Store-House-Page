@@ -14,6 +14,12 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
+const landscape = `
+  @page {
+    size: landscape;
+  }
+`;
+
 function PrintSOL() {
 
   const classes = useStyles();
@@ -21,13 +27,14 @@ function PrintSOL() {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
+    pageStyle: landscape
   });
   // keep image in DOM, but hidden
   // <div style={{ display: "none" }}><ComponentToPrint ref={componentRef} /></div>
 
   return (
       <div>
-        <div style={{ overflow: "hidden", height: "0" }}><img alt='' ref={componentRef} src="/SOL.jpg" width="100%" height="1000" /></div>
+        <div style={{ overflow: "hidden", height: "0" }}><img alt='' ref={componentRef} src="/Laundry.jpg" width="100%" /></div>
         <Hidden xsDown>
           <button type="button" onClick={handlePrint} className={classes.button}>Print</button>
         </Hidden>
