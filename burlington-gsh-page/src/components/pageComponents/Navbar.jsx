@@ -165,7 +165,7 @@ function Navbar() {
           </Typography>
         </Grid>
             <Grid item className={classes.navbarCentered} xs={10} sm={10} md={10} lg={10} xl={10} align="left">
-              <a href='/' className={classes.homeLink}>
+              <a href='/' className={classes.homeLink} aria-label='Logo'>
                 <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
               </a>
               <Typography className={classes.navbar} variant="h5" component="h2">

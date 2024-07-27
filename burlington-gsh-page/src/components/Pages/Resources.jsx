@@ -96,7 +96,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Mobile Resource Bus
                 </Typography>
-                <a href='/MRB Info 3.jpg' target='_blank'>
+                <a href='/MRB Info 3.jpg' target='_blank' aria-label='/MRB Info'>
                   <img className={classes.resources} alt="Mobile Resource Bus Information" border="0" src="/MRB Info 3.jpg" />
                 </a>
                 <PrintMRB />
@@ -105,7 +105,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Coffey County Transportation
                 </Typography>
-                <a href='/CCT Info.jpg' target='_blank'>
+                <a href='/CCT Info.jpg' target='_blank' aria-label='CCT Info'>
                   <img className={classes.resources} alt="" border="0" src="/CCT Info.jpg" />
                 </a>
                 <PrintCCT />
@@ -114,7 +114,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Reigning Grace Counseling Center
                 </Typography>
-                <a href='/Laundry.jpg' target='_blank'>
+                <a href='/Laundry.jpg' target='_blank'  aria-label='Laundry'>
                   <img className={classes.resources} alt="" border="0" src="/Laundry.jpg" />
                 </a>
                 <PrintSOL />
@@ -123,7 +123,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Harvester&#39;s Proxy Acceptance Form
                 </Typography>
-                <a href='/Harvester&#39;s Info 3.jpg' target='_blank'>
+                <a href='/Harvester&#39;s Info 3.jpg' target='_blank'  aria-label='Harvesters Info'>
                   <img className={classes.resources} alt="" border="0" src="/Harvester's Info 3.jpg" />
                 </a>
                 <PrintHPAF />
@@ -150,7 +150,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Parents as Teachers
                 </Typography>
-                <a href='/PAT Info.jpg' target='_blank'>
+                <a href='/PAT Info.jpg' target='_blank' aria-label='PAT Info'>
                   <img className={classes.resources} alt="" border="0" src="/PAT Info.jpg" />
                 </a>
                 <PrintPAT />
@@ -159,7 +159,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Reigning Grace Counseling Center
                 </Typography>
-                <a href='/RGCC.png' target='_blank'>
+                <a href='/RGCC.png' target='_blank' aria-label='RGCC'>
                   <img className={classes.resources} alt="" border="0" src="/RGCC.png" />
                 </a>
                 <PrintRGCC />
@@ -168,7 +168,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Home-Based Services
                 </Typography>
-                <a href='/eckan.jpg' target='_blank'>
+                <a href='/eckan.jpg' target='_blank' aria-label='ECKAN'>
                   <img className={classes.resources} alt="" border="0" src="/eckan.jpg" />
                 </a>
                 <PrintECKAN />
@@ -178,7 +178,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Parents as Teachers
                 </Typography>
-                <a href='/lori.jpg' target='_blank'>
+                <a href='/lori.jpg' target='_blank' aria-label='LORI'>
                   <img className={classes.resources} alt="" border="0" src="/lori.jpg" />
                 </a>
                 <PrintLORI />
@@ -188,7 +188,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   SOS of Coffey County
                 </Typography>
-                <a href='/sos.jpg' target='_blank'>
+                <a href='/sos.jpg' target='_blank' aria-label='SOS'>
                   <img className={classes.resources} alt="" border="0" src="/sos.jpg" />
                 </a>
                 <PrintSOS />
@@ -198,7 +198,7 @@ function Resources() {
                 <Typography className={classes.resourcesTitle} variant="h4" component="h2" gutterBottom>
                   Coffey County Resource Council
                 </Typography>
-                <a href='/CCRC Info.jpg' target='_blank'>
+                <a href='/CCRC Info.jpg' target='_blank' aria-label='CCRC Info'>
                   <img className={classes.resources} alt="" border="0" src="/CCRC Info.jpg" />
                 </a>
                 <PrintCCRC />
