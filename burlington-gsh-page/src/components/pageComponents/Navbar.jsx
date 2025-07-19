@@ -23,14 +23,12 @@ const useStyles = makeStyles(() => ({
     color: "black",
     fontSize: 'min(5vw, 25px)',
     fontWeight: 500,
-    marginLeft: '1%',
-    display: 'inline',
-    verticalAlign: 'middle'
+    marginLeft: '1%'
   },
   navbarCentered: {
     display: 'flex',
     alignItems: 'center',
-    height: 58
+    height: 60
   },
   navbarLinks: {
     textDecoration: "none",
@@ -106,10 +104,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 400,
     fontSize: 'min(2.4vw, 12px)',
     color: 'white',
-    marginRight: 'min(2%, 20px)',
-    display: 'inline',
-    height: '100%',
-    verticalAlign: 'middle'
+    marginRight: 'min(2%, 20px)'
   },
   navbarContactBar: {
     backgroundColor: "rgba(20, 20, 20, 0.85)",
@@ -125,10 +120,22 @@ const useStyles = makeStyles(() => ({
     color: "black",
     fontSize: 'min(3vw, 18px)',
     fontWeight: 300,
-    marginLeft: 'min(2%, 15px)',
     display: 'inline',
     verticalAlign: 'middle',
-    marginTop: '5px'
+    marginTop: '3px'
+  },
+  navbarDiv: {
+    display: 'flex',
+    alignItems: 'center',
+    height: '100%',
+    width: '100%',
+    justifyContent: 'end'
+  },
+  navbarTitle: {
+     display: 'flex',
+    alignItems: 'center',
+    height: '100%',
+    width: '210px'
   }
 }));
 
@@ -157,20 +164,26 @@ function Navbar() {
   return (
     <div className={classes.navbarWrapper}>
         <Grid className={classes.navbarContainer} container>
-        <Grid item className={classes.navbarContactBar} xs={12} sm={12} md={12} lg={12} xl={12} align="right"> 
+        <Grid item className={classes.navbarContactBar} xs={12} sm={12} md={12} lg={12} xl={12} align="right">
+          <div className={classes.navbarDiv}>
           <Typography className={classes.navbarContact} variant="h5" component="h2">
             <a className={classes.navbarContactLinks} href="tel:6203641459">(620) 364-1459</a> &#8226; 
             <a className={classes.navbarContactLinks} target="blank" href="https://www.google.com/search?q=515+Neosho+St%2C+Burlington%2C+KS">515 Neosho St, Burlington, KS</a> &#8226; 
             <a className={classes.navbarContactLinks} href = "mailto: godsstorehousebks@gmail.com">godsstorehousebks@gmail.com</a>
           </Typography>
+          </div>
         </Grid>
             <Grid item className={classes.navbarCentered} xs={10} sm={10} md={10} lg={10} xl={10} align="left">
               <a href='/' className={classes.homeLink} aria-label='Logo'>
                 <img className={classes.navbarLogo} alt="" border="0" src="/logo.png" width="50" height="50" />
               </a>
+                <a href='/' className={classes.homeLink}>
+              <div className={classes.navbarTitle}>
               <Typography className={classes.navbar} variant="h5" component="h2">
-                <a href='/' className={classes.homeLink}> God&#39;s Storehouse </a>
+                 God&#39;s Storehouse 
               </Typography>
+              </div>
+                 </a>
               <Hidden xsDown>
                 <Typography className={classes.navbarSubheader} variant="h5" component="h2">
                   a ministry of CCEMA
@@ -200,7 +213,7 @@ function Navbar() {
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/Resources" className={classes.menuLink} onClick={closeMenuHandler}>Resources</Link>
                     </Typography>
-                    <form className={classes.menuLinkSpacer} action="https://www.paypal.com/donate" method="post" target="_top">
+                    <form className={classes.menuLinkSpacer} action="https://www.paypal.com/donate" method="post" target="_blank">
                      <input type="hidden" name="hosted_button_id" value="APFAUEJRPFTJW" />
                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
                      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />

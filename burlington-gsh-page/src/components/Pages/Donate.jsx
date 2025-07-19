@@ -45,8 +45,8 @@ const useStyles = makeStyles(() => ({
       fontSize: 'min(4vw, 28px)',
       maxWidth: 900,
       padding: 20,
-      marginTop: 50,
-      marginBottom: 40
+      marginTop: 'clamp(15px, 50px, 2vw)',
+      marginBottom: 'clamp(15px, 40px, 2vw)'
   },
   contentBodyIntro: {
     textAlign: 'left',
@@ -57,7 +57,7 @@ const useStyles = makeStyles(() => ({
     fontSize: 'min(4vw, 28px)',
     maxWidth: 900,
     padding: 20,
-    marginTop: 50
+    marginTop: 'clamp(15px, 50px, 2vw)',
   },
   contentBodyList: {
     display: 'inline-block',
@@ -66,7 +66,7 @@ const useStyles = makeStyles(() => ({
     width: '225px',
     color: 'black',
     fontWeight: 300,
-    fontSize: '24px',
+    fontSize: 'min(5vw, 24px)',
     paddingLeft: 0,
     lineHeight: 1.5,
   },
@@ -79,8 +79,8 @@ const useStyles = makeStyles(() => ({
     fontSize: 'min(4vw, 28px)',
     maxWidth: 900,
     padding: 20,
-    marginTop: 50,
-    marginBottom: 50
+    marginTop: 'clamp(15px, 50px, 2vw)',
+    marginBottom: 'clamp(15px, 50px, 2vw)',
   },
   paypalImage: {
     width: '100%',
@@ -89,7 +89,10 @@ const useStyles = makeStyles(() => ({
   paypalContainer: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingLeft: 50,
+    paddingRight: 50,
+    paddingBottom: 'clamp(0px, calc(1300px - 100vw), 30px)'
   },
   listContainer: {
       backgroundColor: 'rgba(205, 205, 205, 0.2)',

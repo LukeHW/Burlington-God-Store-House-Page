@@ -8,15 +8,16 @@ const center = {
 };
 
 const style = { 
-  height: '100%', 
+  height: '810px', 
   width: '100%',
 };
 
 function Map() { 
+  const mapApiKey = process.env.REACT_APP_GOOGLE_MAPS_APO_KEY;
 
   return (
     // Important! Always set the container height explicitly
-    <LoadScript googleMapsApiKey='AIzaSyDnfUEw60TW9NJRkKOu72OaxucqKkmwmVo'>
+    <LoadScript googleMapsApiKey={mapApiKey}>
       <GoogleMap
         mapContainerStyle={style}
         center={center}
@@ -28,4 +29,4 @@ function Map() {
   );
 };
 
-export default Map;
+export default React.memo(Map);

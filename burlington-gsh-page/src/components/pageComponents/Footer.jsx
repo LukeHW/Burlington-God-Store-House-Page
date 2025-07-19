@@ -10,22 +10,24 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     width: "100%",
     zIndex: 100,
-    fontFamily: 'Open Sans'
+    fontFamily: 'Open Sans',
+    minHeight: 65,
+    height: 'auto',
+    maxHeight: 120,
+    display: 'flex',
+    alignItems: 'center'
   },
   footer: {
     color: "white",
     width: 300,
-    marginTop: 20,
-    marginLeft: '7%',
-    fontSize: 15
+    fontSize: 15,
+    marginBottom: 0
   },
   footer2: {
     color: "white",
     width: 300,
-    marginTop: 18,
-    marginBottom: 18,
-    marginLeft: '7%',
-    fontSize: 15
+    fontSize: 15,
+    marginBottom: 0
   },
   footerLinks: {
     textDecoration: "none",
@@ -38,11 +40,13 @@ const useStyles = makeStyles((theme) => ({
     },
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    height: 30
   },
   icons: {
     width: 25,
     height: 25,
+    marginBottom: 5
   },
   iconsContainer: {
     marginTop: 13,
@@ -50,34 +54,45 @@ const useStyles = makeStyles((theme) => ({
   },
   facebookFooter: {
     paddingBottom: '20px'
+  },
+  facebookWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    height: '100%',
+    width: '100%',
+    justifyContent: 'center'
+  },
+  gridWrapper: {
+    flexGrow: 1
   }
 }));
 
 function Footer() {
-
   const classes = useStyles();
 
   return (
     <div className={classes.footerActive}>
-        <Grid container>
-            <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/>
-            <Grid item xs={12} sm={12} md={5} lg={4} xl={4} align="center">
-              <Typography className={classes.footer} variant="h5" component="h2" gutterBottom>
-                <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.footerLinks}>
-                  Created by: LukeHW - 2021
-                </a>
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={12} md={5} lg={4} xl={4} align="center">
-              <Typography className={classes.footer2} variant="h5" component="h2" gutterBottom>
-                <a target='_blank' href='https://www.facebook.com/Gods-Storehouse-101240358583466' rel="noreferrer" className={classes.footerLinks}>
-                  <img className={classes.icons} src="/facebook.png" alt="facebook page" />
-                  <span>Our Facebook Page</span>
-                </a>
-              </Typography>
-            </Grid> 
-            <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/>
+      <Grid container className={classes.gridWrapper} alignItems="center" justifyContent="center">
+        <Grid item xs={12} sm={6} md={5} lg={4} xl={4} align="center">
+          <div className={classes.facebookWrapper}>
+            <Typography className={classes.footer} variant="h5" component="h2" gutterBottom>
+              <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.footerLinks}>
+                <span>Created by: LukeHW - 2021</span>
+              </a>
+            </Typography>
+          </div>
         </Grid>
+        <Grid item xs={12} sm={6} md={5} lg={4} xl={4} align="center">
+          <div className={classes.facebookWrapper}>
+            <Typography className={classes.footer2} variant="h5" component="h2" gutterBottom>
+              <a target='_blank' href='https://www.facebook.com/Gods-Storehouse-101240358583466' rel="noreferrer" className={classes.footerLinks}>
+                <img className={classes.icons} src="/facebook.png" alt="facebook page" />
+                <span>Our Facebook Page</span>
+              </a>
+            </Typography>
+          </div>
+        </Grid>
+      </Grid>
     </div>
   );
 }
