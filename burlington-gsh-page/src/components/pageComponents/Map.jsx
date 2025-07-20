@@ -1,32 +1,27 @@
 /* eslint-disable no-shadow */
-import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import React from "react";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 const center = {
   lat: 38.194402,
-  lng: -95.7409615
+  lng: -95.7409615,
 };
 
-const style = { 
-  height: '810px', 
-  width: '100%',
+const style = {
+  height: "810px",
+  width: "100%",
 };
 
-function Map() { 
-  const mapApiKey = process.env.REACT_APP_GOOGLE_MAPS_APO_KEY;
+function Map() {
+  const mapApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
   return (
-    // Important! Always set the container height explicitly
     <LoadScript googleMapsApiKey={mapApiKey}>
-      <GoogleMap
-        mapContainerStyle={style}
-        center={center}
-        zoom={17}
-      >
+      <GoogleMap mapContainerStyle={style} center={center} zoom={17}>
         <Marker position={center} />
       </GoogleMap>
     </LoadScript>
   );
-};
+}
 
 export default React.memo(Map);
