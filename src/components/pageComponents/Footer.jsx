@@ -44,9 +44,9 @@ const useStyles = makeStyles((theme) => ({
     height: 30,
   },
   icons: {
-    width: 25,
-    height: 25,
-    marginBottom: 5,
+    width: 30,
+    height: 30,
+    marginBottom: 2,
   },
   iconsContainer: {
     marginTop: 13,
@@ -87,7 +87,7 @@ function Footer() {
             <Typography className={classes.footer2} variant="h5" component="h2" gutterBottom>
               <a target="_blank" href="https://www.facebook.com/Gods-Storehouse-101240358583466" rel="noreferrer" className={classes.footerLinks}>
                 <img className={classes.icons} src="/facebook.png" alt="facebook page" />
-                <span>Our Facebook Page</span>
+                <span>GSH Facebook Page</span>
               </a>
             </Typography>
           </div>
