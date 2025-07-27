@@ -15,7 +15,7 @@ import Donate from "./components/Pages/Donate";
 import Page from "./components/pageComponents/Page";
 import Footer from "./components/pageComponents/Footer";
 import Navbar from "./components/pageComponents/Navbar";
-import Resources from "./components/Pages/Resources";
+import Resources from "./components/Pages/Resources.tsx";
 import ScrollToTop from "./components/pageComponents/Scroll";
 
 // styles for App.js
