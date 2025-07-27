@@ -1,13 +1,29 @@
 {
-    "rules": {
-        "no-unused-vars": "warn",
-        "react/jsx-filename-extension": "warn",
-        "no-undef": "warn",
-        "no-sequences": "warn",
-        "no-restricted-syntax": "warn",
-        "arrow-body-style": "warn",
-        "react/jsx-props-no-spreading": "off",
-        "prefer-const": "warn"
-    },
-    "extends": ["airbnb", "prettier", "prettier/react"]
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["airbnb", "prettier", "plugin:react/recommended", "plugin:import/errors", "plugin:import/warnings", "plugin:import/typescript"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "react/jsx-filename-extension": "warn",
+    "no-undef": "warn",
+    "no-sequences": "warn",
+    "no-restricted-syntax": "warn",
+    "arrow-body-style": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "prefer-const": "warn",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  }
 }

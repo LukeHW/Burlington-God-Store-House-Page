@@ -1,5 +1,5 @@
 // import modules
-import React from "react";
+import * as React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -15,7 +15,7 @@ import Donate from "./components/Pages/Donate";
 import Page from "./components/pageComponents/Page";
 import Footer from "./components/pageComponents/Footer";
 import Navbar from "./components/pageComponents/Navbar";
-import Resources from "./components/Pages/Resources.tsx";
+import Resources from "./components/Pages/Resources";
 import ScrollToTop from "./components/pageComponents/Scroll";
 
 // styles for App.js

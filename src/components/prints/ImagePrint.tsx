@@ -54,6 +54,7 @@ const ImagePrint: React.FC<ImagePrintProps> = ({ imageSrc, ariaLabel = "Resource
           <img src={imageSrc} alt="To Print" className={classes.resources} />
         </a>
       </div>
+      {/* @ts-ignore */}
       <Hidden xsDown>
         <Button variant="contained" color="primary" onClick={handlePrint} className={classes.button}>
           {buttonLabel}
