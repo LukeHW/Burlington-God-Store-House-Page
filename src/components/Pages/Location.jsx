@@ -92,13 +92,17 @@ const useStyles = makeStyles((theme) => ({
   },
   headerBackground: {
     width: "100%",
-    height: "min(50vw, 600px)",
+    height: "min(50vw, 500px)",
     minHeight: "300px",
+    maxHeight: "500px",
     marginTop: 85,
     backgroundImage: `url(${bg})`,
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center",
+    backgroundPosition: "center 35%",
     backgroundSize: "cover",
+    [theme.breakpoints.down("md")]: {
+      backgroundPosition: "center center",
+    },
   },
   headerContainer: {
     height: "inherit",
@@ -125,7 +129,7 @@ function Location() {
         <div className={classes.headerContainer}>&nbsp;</div>
       </div>
 
-      <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={5} xl={5}>
+      <Grid item className={classes.spacer} xs={12} sm={12} md={5} lg={5} xl={5}>
         <div className={classes.addressWrapperSecondary}>
           <Typography className={classes.mapTextHeader} variant="h2" component="h2" align="left">
             Address
@@ -174,7 +178,7 @@ function Location() {
           </Typography>
         </div>
       </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={7} xl={7}>
+      <Grid item xs={12} sm={12} md={7} lg={7} xl={7}>
         <Map />
       </Grid>
     </Grid>

@@ -204,7 +204,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "auto",
   },
   carousel: {
-    backgroundColor: "rgba(55, 55, 55, 0.7)",
+    backgroundColor: "rgba(14, 14, 14, 0.8)",
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
