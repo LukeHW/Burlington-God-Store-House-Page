@@ -21,8 +21,12 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Inject API key
+        run: echo "REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }}" >> .env
+
       - name: Build project
-        run: yarn build
+        run:
+          yarn build
         env:
           CI: false
 
